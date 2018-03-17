@@ -1,0 +1,3 @@
+./conll16/shell/pdtb_senser.sh /media/training-datasets/discourse-relation-sense-classification/conll16-st-dev-en-2016-03-29 . /tmp/oslopots/2016-05-08-19-41-04/output
+
+

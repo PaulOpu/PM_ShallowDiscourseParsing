@@ -1,0 +1,324 @@
+measure {
+ key: "All Parser precision" 
+ value: "0.657"
+}
+measure {
+ key: "All Parser recall" 
+ value: "0.657"
+}
+measure {
+ key: "All Parser f1" 
+ value: "0.657"
+}
+measure {
+ key: "All Explicit connective precision" 
+ value: "1.0"
+}
+measure {
+ key: "All Explicit connective recall" 
+ value: "1.0"
+}
+measure {
+ key: "All Explicit connective f1" 
+ value: "1.0"
+}
+measure {
+ key: "All Arg1 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "All Arg1 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "All Arg1 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "All Arg2 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "All Arg2 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "All Arg2 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "All Arg 1 Arg2 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "All Arg 1 Arg2 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "All Arg 1 Arg2 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only Parser precision" 
+ value: "0.9135"
+}
+measure {
+ key: "Explicit only Parser recall" 
+ value: "0.9135"
+}
+measure {
+ key: "Explicit only Parser f1" 
+ value: "0.9135"
+}
+measure {
+ key: "Explicit only Explicit connective precision" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only Explicit connective recall" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only Explicit connective f1" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only Arg1 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only Arg1 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only Arg1 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only Arg2 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only Arg2 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only Arg2 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only Arg 1 Arg2 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only Arg 1 Arg2 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only Arg 1 Arg2 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only Parser precision" 
+ value: "0.4312"
+}
+measure {
+ key: "Non-explicit only Parser recall" 
+ value: "0.4312"
+}
+measure {
+ key: "Non-explicit only Parser f1" 
+ value: "0.4312"
+}
+measure {
+ key: "Non-explicit only Explicit connective precision" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only Explicit connective recall" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only Explicit connective f1" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only Arg1 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only Arg1 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only Arg1 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only Arg2 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only Arg2 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only Arg2 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only Arg 1 Arg2 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only Arg 1 Arg2 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only Arg 1 Arg2 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "All (partial match) Parser precision" 
+ value: "0.6392"
+}
+measure {
+ key: "All (partial match) Parser recall" 
+ value: "0.6392"
+}
+measure {
+ key: "All (partial match) Parser f1" 
+ value: "0.6392"
+}
+measure {
+ key: "All (partial match) Arg1 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "All (partial match) Arg1 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "All (partial match) Arg1 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "All (partial match) Arg2 extraction precision" 
+ value: "0.9944"
+}
+measure {
+ key: "All (partial match) Arg2 extraction recall" 
+ value: "0.9944"
+}
+measure {
+ key: "All (partial match) Arg2 extraction f1" 
+ value: "0.9944"
+}
+measure {
+ key: "All (partial match) Arg 1 Arg2 extraction precision" 
+ value: "0.9944"
+}
+measure {
+ key: "All (partial match) Arg 1 Arg2 extraction recall" 
+ value: "0.9944"
+}
+measure {
+ key: "All (partial match) Arg 1 Arg2 extraction f1" 
+ value: "0.9944"
+}
+measure {
+ key: "Explicit only (partial match) Parser precision" 
+ value: "0.8816"
+}
+measure {
+ key: "Explicit only (partial match) Parser recall" 
+ value: "0.8816"
+}
+measure {
+ key: "Explicit only (partial match) Parser f1" 
+ value: "0.8816"
+}
+measure {
+ key: "Explicit only (partial match) Arg1 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only (partial match) Arg1 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only (partial match) Arg1 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "Explicit only (partial match) Arg2 extraction precision" 
+ value: "0.9881"
+}
+measure {
+ key: "Explicit only (partial match) Arg2 extraction recall" 
+ value: "0.9881"
+}
+measure {
+ key: "Explicit only (partial match) Arg2 extraction f1" 
+ value: "0.9881"
+}
+measure {
+ key: "Explicit only (partial match) Arg 1 Arg2 extraction precision" 
+ value: "0.9882"
+}
+measure {
+ key: "Explicit only (partial match) Arg 1 Arg2 extraction recall" 
+ value: "0.9882"
+}
+measure {
+ key: "Explicit only (partial match) Arg 1 Arg2 extraction f1" 
+ value: "0.9882"
+}
+measure {
+ key: "Non-explicit only (partial match) Parser precision" 
+ value: "0.4259"
+}
+measure {
+ key: "Non-explicit only (partial match) Parser recall" 
+ value: "0.4259"
+}
+measure {
+ key: "Non-explicit only (partial match) Parser f1" 
+ value: "0.4259"
+}
+measure {
+ key: "Non-explicit only (partial match) Arg1 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only (partial match) Arg1 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only (partial match) Arg1 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only (partial match) Arg2 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only (partial match) Arg2 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only (partial match) Arg2 extraction f1" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only (partial match) Arg 1 Arg2 extraction precision" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only (partial match) Arg 1 Arg2 extraction recall" 
+ value: "1.0"
+}
+measure {
+ key: "Non-explicit only (partial match) Arg 1 Arg2 extraction f1" 
+ value: "1.0"
+}
