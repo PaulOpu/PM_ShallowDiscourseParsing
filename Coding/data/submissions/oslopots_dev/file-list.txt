@@ -1,4 +1,0 @@
-/mnt/nfs/tira/data/runs/conll16-st-dev-en-2016-03-29/oslopots/2016-05-08-19-41-04/output
-└── [489K]  output.json
-
-0 directories, 1 file

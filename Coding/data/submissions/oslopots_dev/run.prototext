@@ -1,7 +1,0 @@
-softwareId: "software1"
-runId: "2016-05-08-19-41-04"
-inputDataset: "conll16-st-dev-en-2016-03-29"
-inputRun: "none"
-downloadable: true
-deleted: false
-taskId: "discourse-relation-sense-classification"
