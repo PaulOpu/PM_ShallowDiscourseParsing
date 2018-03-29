@@ -1,0 +1,7 @@
+softwareId: "software3"
+runId: "2016-05-02-08-49-01"
+inputDataset: "conll16-st-test-en-2016-03-29"
+inputRun: "none"
+downloadable: false
+deleted: false
+taskId: "discourse-relation-sense-classification"

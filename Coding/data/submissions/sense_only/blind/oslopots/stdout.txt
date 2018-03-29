@@ -1,0 +1,3 @@
+./conll16/shell/pdtb_senser.sh /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29 . /tmp/oslopots/2016-05-08-19-58-35/output
+
+

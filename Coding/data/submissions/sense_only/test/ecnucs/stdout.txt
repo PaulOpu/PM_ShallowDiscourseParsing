@@ -1,0 +1,10 @@
+anaconda3/bin/python pycharmSpace/CoNLL2016/enSense/parser.py /media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29 none /tmp/ecnucs/2016-05-02-08-49-01/output
+
+
+Accuracy = 0% (0/931)
+loading datasets	
+Explicit vs Non-Explicit vs Others: 931 vs 1008 vs 0
+==>Explicit Sense Classifier
+Using LIB_LINEAR Classifier
+==>Non-Explicit Sense classifier using CNN
+th /home/ecnucs/pycharmSpace/CoNLL2016/enSense/nn/predict.lua -m /home/ecnucs/pycharmSpace/CoNLL2016/enSense/model/cnn_model_three_filters_dev_46.06.th -t /home/ecnucs/pycharmSpace/CoNLL2016/enSense/parser_output/non_explicit/data -p /home/ecnucs/pycharmSpace/CoNLL2016/enSense/parser_output/non_explicit/pred.txt
