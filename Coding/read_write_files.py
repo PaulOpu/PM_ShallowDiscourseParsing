@@ -8,5 +8,3 @@ def save_json(data,file_path):
     with open(file_path, 'w') as f:
         for date in data:
             f.write(json.dumps(date)+"\n")
-
-def save_model_json
