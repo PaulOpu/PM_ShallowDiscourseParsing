@@ -1,0 +1,40 @@
+\documentclass[10pt,notitlepage]{scrartcl}
+\usepackage[a4paper,margin=1.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{moreverb}
+\usepackage{graphicx}
+\usepackage{setspace}
+
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
+\AtBeginEnvironment{quote}{\singlespacing\small}
+\DeclareMathOperator{\sgn}{sgn}
+
+
+\author{Malte Klingenberg, 794394}
+\title{Customer review rating prediction}
+\date{}
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+
+\section*{Introduction}
+
+\section*{Dataset}
+CoNLL \cite{xue2016conll}
+\section*{Approach}
+
+\section*{Evaluation}
+
+\section*{Conclusion}
+
+
+\pagebreak
+\bibliography{projectreport}
+\bibliographystyle{apalike}
+
+\end{document}
