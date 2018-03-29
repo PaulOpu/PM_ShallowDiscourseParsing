@@ -1,0 +1,8 @@
+python3 /home/tao0920/work/subtask/parser_sup.py /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29 none /tmp/tao0920/2016-05-02-16-23-49/output
+
+
+explicit clf feature : Done!
+/home/tao0920/work/subtask/mallet/bin/mallet classify-file --input /home/tao0920/work/subtask/parser_output/feature/explicit_clf_feature.txt --output /home/tao0920/work/subtask/parser_output/model_output/explicit_clf_model_output.txt --classifier /home/tao0920/work/subtask/model/explicit_classifier.model
+((657, 120), (657, 120))
+Implicit cnn is building...
+Implicit cnn finish building!

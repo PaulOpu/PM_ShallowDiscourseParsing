@@ -1,0 +1,10 @@
+python3 src/hoge/main.py /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29 model/16-train-en-160329/mpqa_only/ /tmp/ykido/2016-05-09-08-16-16/output -m m --mpqa-filename model/mpqa_subj_05.number.json
+
+
+Parameters:
+    output_file = /tmp/ykido/2016-05-09-08-16-16/output/output.json
+    parses_file = /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29/parses.json
+    relation_file = /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29/relations-no-senses.json
+    model_file = model/16-train-en-160329/mpqa_only//m
+    mpqa_file = model/mpqa_subj_05.number.json
+    

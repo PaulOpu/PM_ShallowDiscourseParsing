@@ -1,0 +1,24 @@
+DEBUG:weka.core.jvm:Adding bundled jars
+DEBUG:weka.core.jvm:Adding Weka packages
+DEBUG:weka.core.jvm:package_dir=/home/nguyenlab/wekafiles/packages
+DEBUG:weka.core.jvm:  directory=/home/nguyenlab/wekafiles/packages/SMOTE
+DEBUG:weka.core.jvm:  directory=/home/nguyenlab/wekafiles/packages/multisearch
+DEBUG:weka.core.jvm:  directory=/home/nguyenlab/wekafiles/packages/LibLINEAR
+DEBUG:weka.core.jvm:  directory=/home/nguyenlab/wekafiles/packages/gridSearch
+DEBUG:weka.core.jvm:  directory=/home/nguyenlab/wekafiles/packages/LibSVM
+DEBUG:weka.core.jvm:Classpath=['/usr/local/lib/python2.7/dist-packages/javabridge/jars/rhino-1.7R4.jar', '/usr/local/lib/python2.7/dist-packages/javabridge/jars/runnablequeue.jar', '/usr/local/lib/python2.7/dist-packages/javabridge/jars/cpython.jar', '/usr/local/lib/python2.7/dist-packages/weka/lib/python-weka-wrapper.jar', '/usr/local/lib/python2.7/dist-packages/weka/lib/weka.jar', '/home/nguyenlab/wekafiles/packages/SMOTE/SMOTE.jar', '/home/nguyenlab/wekafiles/packages/multisearch/multisearch-2016.1.30.jar', '/home/nguyenlab/wekafiles/packages/LibLINEAR/lib/liblinear-java-1.96-SNAPSHOT.jar', '/home/nguyenlab/wekafiles/packages/LibLINEAR/LibLINEAR.jar', '/home/nguyenlab/wekafiles/packages/gridSearch/gridSearch.jar', '/home/nguyenlab/wekafiles/packages/LibSVM/LibSVM.jar', '/home/nguyenlab/wekafiles/packages/LibSVM/lib/libsvm.jar']
+DEBUG:weka.core.jvm:MaxHeapSize=default
+DEBUG:javabridge.jutil:Creating JVM object
+DEBUG:javabridge.jutil:Signalling caller
+DEBUG:weka.core.jvm:Adding bundled jars
+DEBUG:weka.core.jvm:Adding Weka packages
+DEBUG:weka.core.jvm:package_dir=/home/nguyenlab/wekafiles/packages
+DEBUG:weka.core.jvm:  directory=/home/nguyenlab/wekafiles/packages/SMOTE
+DEBUG:weka.core.jvm:  directory=/home/nguyenlab/wekafiles/packages/multisearch
+DEBUG:weka.core.jvm:  directory=/home/nguyenlab/wekafiles/packages/LibLINEAR
+DEBUG:weka.core.jvm:  directory=/home/nguyenlab/wekafiles/packages/gridSearch
+DEBUG:weka.core.jvm:  directory=/home/nguyenlab/wekafiles/packages/LibSVM
+DEBUG:weka.core.jvm:Classpath=['/usr/local/lib/python2.7/dist-packages/javabridge/jars/rhino-1.7R4.jar', '/usr/local/lib/python2.7/dist-packages/javabridge/jars/runnablequeue.jar', '/usr/local/lib/python2.7/dist-packages/javabridge/jars/cpython.jar', '/usr/local/lib/python2.7/dist-packages/weka/lib/python-weka-wrapper.jar', '/usr/local/lib/python2.7/dist-packages/weka/lib/weka.jar', '/home/nguyenlab/wekafiles/packages/SMOTE/SMOTE.jar', '/home/nguyenlab/wekafiles/packages/multisearch/multisearch-2016.1.30.jar', '/home/nguyenlab/wekafiles/packages/LibLINEAR/lib/liblinear-java-1.96-SNAPSHOT.jar', '/home/nguyenlab/wekafiles/packages/LibLINEAR/LibLINEAR.jar', '/home/nguyenlab/wekafiles/packages/gridSearch/gridSearch.jar', '/home/nguyenlab/wekafiles/packages/LibSVM/LibSVM.jar', '/home/nguyenlab/wekafiles/packages/LibSVM/lib/libsvm.jar']
+DEBUG:weka.core.jvm:MaxHeapSize=default
+DEBUG:javabridge.jutil:Creating JVM object
+DEBUG:javabridge.jutil:Signalling caller

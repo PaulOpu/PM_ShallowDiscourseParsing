@@ -1,0 +1,13 @@
+May 03, 2016 4:31:08 PM de.tudarmstadt.ukp.dkpro.core.api.io.ResourceCollectionReaderBase scan(387)
+INFO: Scanning [file:/media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29/raw/]
+May 03, 2016 4:31:09 PM de.tudarmstadt.ukp.dkpro.core.api.io.ResourceCollectionReaderBase initialize(218)
+INFO: Found [100] resources to be read
+May 03, 2016 4:31:17 PM de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceObjectProviderBase configure
+INFO: Producing resource from jar:file:/home/clac/CLaCDiscourseParser/discourse.parser.parent/discourse.parser.evaluation/target/dependency/de.tudarmstadt.ukp.dkpro.core.api.lexmorph-asl-1.7.0.jar!/de/tudarmstadt/ukp/dkpro/core/api/lexmorph/tagset/en-default-pos.map
+May 03, 2016 4:31:17 PM de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceObjectProviderBase loadResource
+INFO: Producing resource took 7ms
+May 03, 2016 4:31:17 PM de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceObjectProviderBase configure
+INFO: Producing resource from jar:file:/home/clac/CLaCDiscourseParser/discourse.parser.parent/discourse.parser.evaluation/target/dependency/de.tudarmstadt.ukp.dkpro.core.api.syntax-asl-1.7.0.jar!/de/tudarmstadt/ukp/dkpro/core/api/syntax/tagset/en-default-constituency.map
+May 03, 2016 4:31:17 PM de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceObjectProviderBase loadResource
+INFO: Producing resource took 2ms
+SyntaxReader.addDependency() Out of sync: null <> ROOT-0, Seven <> ROOT-1

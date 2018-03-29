@@ -1,0 +1,49 @@
+71 files are available in the raw directory.
+May 04, 2016 3:23:48 AM de.tudarmstadt.ukp.dkpro.core.api.io.ResourceCollectionReaderBase scan(387)
+INFO: Scanning [file:/media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29/raw/]
+May 04, 2016 3:23:49 AM de.tudarmstadt.ukp.dkpro.core.api.io.ResourceCollectionReaderBase initialize(218)
+INFO: Found [71] resources to be read
+May 04, 2016 3:23:54 AM de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceObjectProviderBase configure
+INFO: Producing resource from jar:file:/home/clac/CLaCDiscourseParser/discourse.parser.parent/discourse.parser.evaluation/target/dependency/de.tudarmstadt.ukp.dkpro.core.api.lexmorph-asl-1.7.0.jar!/de/tudarmstadt/ukp/dkpro/core/api/lexmorph/tagset/en-default-pos.map
+May 04, 2016 3:23:54 AM de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceObjectProviderBase loadResource
+INFO: Producing resource took 4ms
+May 04, 2016 3:23:54 AM de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceObjectProviderBase configure
+INFO: Producing resource from jar:file:/home/clac/CLaCDiscourseParser/discourse.parser.parent/discourse.parser.evaluation/target/dependency/de.tudarmstadt.ukp.dkpro.core.api.syntax-asl-1.7.0.jar!/de/tudarmstadt/ukp/dkpro/core/api/syntax/tagset/en-default-constituency.map
+May 04, 2016 3:23:54 AM de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceObjectProviderBase loadResource
+INFO: Producing resource took 1ms
+SyntaxReader.addDependency() Out of sync: looking <> looking-25, ’re <> 're-24
+SyntaxReader.addDependency() Out of sync: tie <> tie-4, n’t <> n't-3
+SyntaxReader.addDependency() Out of sync: Jerry <> Jerry-29, ’s <> 's-30
+SyntaxReader.addDependency() Out of sync: Macapagal-Arroyo <> Macapagal-Arroyo-10, ’s <> 's-11
+SyntaxReader.addDependency() Out of sync: Army <> Army-8, ’s <> 's-9
+SyntaxReader.addDependency() Out of sync: 49 <> 49-11, £ <> #-10
+SyntaxReader.addDependency() Out of sync: million <> million-18, £ <> #-16
+SyntaxReader.addDependency() Out of sync: null <> ROOT-0, After <> ROOT-1
+SyntaxReader.addDependency() Out of sync: 50 <> 50-36, £ <> #-35
+SyntaxReader.addDependency() Out of sync: afford <> afford-39, n’t <> n't-38
+SyntaxReader.addDependency() Out of sync: continued <> continued-2, [ <> -LSB--5
+SyntaxReader.addDependency() Out of sync: today <> today-8, ] <> -RSB--7
+SyntaxReader.addDependency() Out of sync: million <> million-20, £ <> #-18
+SyntaxReader.addDependency() Out of sync: world <> world-32, ’s <> 's-33
+SyntaxReader.addDependency() Out of sync: world <> world-37, ’s <> 's-38
+SyntaxReader.addDependency() Out of sync: world <> world-42, ’s <> 's-43
+SyntaxReader.addDependency() Out of sync: $ <> $-4, € <> $-8
+SyntaxReader.addDependency() Out of sync: € <> $-8, million <> million-10
+SyntaxReader.addDependency() Out of sync: going <> going-17, ’s <> 's-16
+SyntaxReader.addDependency() Out of sync: agreed <> agreed-33, ’ve <> 've-32
+SyntaxReader.addDependency() Out of sync: Israel <> Israel-10, ’s <> 's-11
+SyntaxReader.addDependency() Out of sync: 26.5 <> 26.5-5, £ <> #-4
+SyntaxReader.addDependency() Out of sync: been <> been-24, n’t <> n't-23
+SyntaxReader.addDependency() Out of sync: Wander <> Wander-12, n’t <> n't-3
+SyntaxReader.addDependency() Out of sync: love <> love-25, ’d <> 'd-24
+SyntaxReader.addDependency() Out of sync: 1990 <> 1990-4, ’s <> 's-5
+SyntaxReader.addDependency() Out of sync: 300m <> 300m-5, £ <> #-4
+SyntaxReader.addDependency() Out of sync: 300m <> 300m-3, £ <> #-2
+SyntaxReader.addDependency() Out of sync: 157m <> 157m-33, £ <> #-32
+SyntaxReader.addDependency() Out of sync: 60m <> 60m-3, £ <> #-2
+SyntaxReader.addDependency() Out of sync: general <> general-9, ’s <> 's-10
+SyntaxReader.addDependency() Out of sync: General <> General-21, ’s <> 's-22
+SyntaxReader.addDependency() Out of sync: billion <> billion-14, £ <> #-12
+SyntaxReader.addDependency() Out of sync: Baqubah <> Baqubah-8, ’s <> 's-9
+SyntaxReader.addDependency() Out of sync: Estrada <> Estrada-15, ’s <> 's-16
+SyntaxReader.addDependency() Out of sync: was <> was-12, n’t <> n't-13

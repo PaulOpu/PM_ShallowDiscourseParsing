@@ -1,0 +1,5 @@
+T: 1209
+A: 1209
+WARNING: ngram-like tokens found in model, did you set the correct -W and -N options?, at icsiboost.c:1645
+/usr/lib/python2.7/dist-packages/numpy/core/_methods.py:55: RuntimeWarning: Mean of empty slice.
+  warnings.warn("Mean of empty slice.", RuntimeWarning)

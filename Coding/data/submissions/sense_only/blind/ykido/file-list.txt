@@ -1,0 +1,4 @@
+/mnt/nfs/tira/data/runs/conll16-st-blind-test-en-2016-03-29/ykido/2016-05-09-08-16-16/output
+└── [829K]  output.json
+
+0 directories, 1 file

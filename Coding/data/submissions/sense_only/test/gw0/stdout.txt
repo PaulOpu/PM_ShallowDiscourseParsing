@@ -1,0 +1,315 @@
+/home/gw0/conll16st-v21/v21/tira_run_en.sh /media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29 /tmp/gw0/2016-05-09-09-07-04/output
+
+
+
+=== running on conn_eq_0 ===
+./v21/classifier.py en ./models-v21/conll16st-v21-v21-81-ceq0wd100sd100-en-train /media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29 /tmp/gw0/2016-05-09-09-07-04/output --config={"filter_fn_name":"conn_eq_0", "words2vec_bin":"./data/word2vec-en/GoogleNews-vectors-negative300.bin.gz", "words2brown_txt":"./data/brown-en/brown-rcv1.clean.tokenized-CoNLL03.txt-c1000-freq1.txt"}
+--------------------------------------------------------------------------------
+Layer (name)                  Output Shape                  Param #             
+--------------------------------------------------------------------------------
+Layer (words_input)           (None, 204)                   0                   
+Layer (letters_input)         (None, 1224)                  0                   
+Layer (words2brown_input)     (None, 204)                   0                   
+Layer (focus_input)           (None, 204, 1)                0                   
+Layer (rmarking_io_input)     (None, 204, 5)                0                   
+Layer (words_rand)            (None, 204)                   0                   
+Embedding (words_input_emb)   (None, 204, 100)              4391800             
+Embedding (letters_input_emb_o(None, 1224, 5)               410                 
+Reshape (letters_input_emb)   (None, 204, 30)               0                   
+Embedding (words2brown_input_e(None, 204, 40)               40080               
+Activation (shared_1)         (None, 204, 176)              0                   
+Activation (pos_tags_in)      (None, 204, 176)              0                   
+TimeDistributedDense (pos_tags(None, 204, 47)               8319                
+Activation (pos_tags_out)     (None, 204, 47)               0                   
+Activation (pos_join_in)      (None, 204, 176)              0                   
+TimeDistributedDense (pos_join(None, 204, 73)               12921               
+Activation (pos_join_out)     (None, 204, 73)               0                   
+Activation (deps_join_in)     (None, 204, 176)              0                   
+TimeDistributedDense (deps_joi(None, 204, 46)               8142                
+Activation (deps_join_out)    (None, 204, 46)               0                   
+Activation (rtypes_last_in)   (None, 204, 176)              0                   
+GRU (rtypes_last_fwd)         (None, 4)                     2172                
+GRU (rtypes_last_bck)         (None, 4)                     2172                
+Dense (rtypes_last_out)       (None, 4)                     36                  
+Activation (rsenses_last_in)  (None, 204, 176)              0                   
+GRU (rsenses_last_fwd)        (None, 21)                    12474               
+GRU (rsenses_last_bck)        (None, 21)                    12474               
+Dense (rsenses_last_out)      (None, 21)                    903                 
+GRU (shared_2_gru_fwd_seq)    (None, 204, 100)              83100               
+GRU (shared_2_gru_bck_seq)    (None, 204, 100)              83100               
+TimeDistributedDense (shared_2(None, 204, 100)              37700               
+BatchNormalization (shared_2_n(None, 204, 100)              200                 
+Dropout (shared_2)            (None, 204, 100)              0                   
+Activation (pos_tags_2_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_tags(None, 204, 47)               4747                
+Activation (pos_tags_2_out)   (None, 204, 47)               0                   
+Activation (pos_join_2_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_join(None, 204, 73)               7373                
+Activation (pos_join_2_out)   (None, 204, 73)               0                   
+Activation (deps_join_2_in)   (None, 204, 100)              0                   
+TimeDistributedDense (deps_joi(None, 204, 46)               4646                
+Activation (deps_join_2_out)  (None, 204, 46)               0                   
+Activation (rtypes_last_2_in) (None, 204, 100)              0                   
+GRU (rtypes_last_2_fwd)       (None, 4)                     1260                
+GRU (rtypes_last_2_bck)       (None, 4)                     1260                
+Dense (rtypes_last_2_out)     (None, 4)                     36                  
+Activation (rsenses_last_2_in)(None, 204, 100)              0                   
+GRU (rsenses_last_2_fwd)      (None, 21)                    7686                
+GRU (rsenses_last_2_bck)      (None, 21)                    7686                
+Dense (rsenses_last_2_out)    (None, 21)                    903                 
+GRU (shared_3_gru_fwd_seq)    (None, 204, 100)              60300               
+GRU (shared_3_gru_bck_seq)    (None, 204, 100)              60300               
+TimeDistributedDense (shared_3(None, 204, 100)              30100               
+BatchNormalization (shared_3_n(None, 204, 100)              200                 
+Dropout (shared_3)            (None, 204, 100)              0                   
+Activation (pos_tags_3_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_tags(None, 204, 47)               4747                
+Activation (pos_tags_3_out)   (None, 204, 47)               0                   
+Activation (pos_join_3_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_join(None, 204, 73)               7373                
+Activation (pos_join_3_out)   (None, 204, 73)               0                   
+Activation (deps_join_3_in)   (None, 204, 100)              0                   
+TimeDistributedDense (deps_joi(None, 204, 46)               4646                
+Activation (deps_join_3_out)  (None, 204, 46)               0                   
+Activation (rtypes_last_3_in) (None, 204, 100)              0                   
+GRU (rtypes_last_3_fwd)       (None, 4)                     1260                
+GRU (rtypes_last_3_bck)       (None, 4)                     1260                
+Dense (rtypes_last_3_out)     (None, 4)                     36                  
+Activation (rsenses_last_3_in)(None, 204, 100)              0                   
+GRU (rsenses_last_3_fwd)      (None, 21)                    7686                
+GRU (rsenses_last_3_bck)      (None, 21)                    7686                
+Dense (rsenses_last_3_out)    (None, 21)                    903                 
+GRU (shared_4_gru_fwd_seq)    (None, 204, 100)              60300               
+GRU (shared_4_gru_bck_seq)    (None, 204, 100)              60300               
+TimeDistributedDense (shared_4(None, 204, 100)              30100               
+BatchNormalization (shared_4_n(None, 204, 100)              200                 
+Dropout (shared_4)            (None, 204, 100)              0                   
+Activation (pos_tags_4_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_tags(None, 204, 47)               4747                
+Activation (pos_tags_4_out)   (None, 204, 47)               0                   
+Activation (pos_join_4_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_join(None, 204, 73)               7373                
+Activation (pos_join_4_out)   (None, 204, 73)               0                   
+Activation (deps_join_4_in)   (None, 204, 100)              0                   
+TimeDistributedDense (deps_joi(None, 204, 46)               4646                
+Activation (deps_join_4_out)  (None, 204, 46)               0                   
+Activation (rtypes_last_4_in) (None, 204, 100)              0                   
+GRU (rtypes_last_4_fwd)       (None, 4)                     1260                
+GRU (rtypes_last_4_bck)       (None, 4)                     1260                
+Dense (rtypes_last_4_out)     (None, 4)                     36                  
+Activation (rsenses_last_4_in)(None, 204, 100)              0                   
+GRU (rsenses_last_4_fwd)      (None, 21)                    7686                
+GRU (rsenses_last_4_bck)      (None, 21)                    7686                
+Dense (rsenses_last_4_out)    (None, 21)                    903                 
+GRU (shared_5_gru_fwd_seq)    (None, 204, 100)              60300               
+GRU (shared_5_gru_bck_seq)    (None, 204, 100)              60300               
+TimeDistributedDense (shared_5(None, 204, 100)              30100               
+BatchNormalization (shared_5_n(None, 204, 100)              200                 
+Dropout (shared_5)            (None, 204, 100)              0                   
+Activation (pos_tags_5_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_tags(None, 204, 47)               4747                
+Activation (pos_tags_5_out)   (None, 204, 47)               0                   
+Activation (pos_join_5_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_join(None, 204, 73)               7373                
+Activation (pos_join_5_out)   (None, 204, 73)               0                   
+Activation (deps_join_5_in)   (None, 204, 100)              0                   
+TimeDistributedDense (deps_joi(None, 204, 46)               4646                
+Activation (deps_join_5_out)  (None, 204, 46)               0                   
+Activation (rtypes_last_5_in) (None, 204, 100)              0                   
+GRU (rtypes_last_5_fwd)       (None, 4)                     1260                
+GRU (rtypes_last_5_bck)       (None, 4)                     1260                
+Dense (rtypes_last_5_out)     (None, 4)                     36                  
+Activation (rsenses_last_5_in)(None, 204, 100)              0                   
+GRU (rsenses_last_5_fwd)      (None, 21)                    7686                
+GRU (rsenses_last_5_bck)      (None, 21)                    7686                
+Dense (rsenses_last_5_out)    (None, 21)                    903                 
+Embedding (words_rand_emb)    (None, 204, 100)              4391800             
+RollOffsets (words_rand_emb_of(None, 204, 10, 100)          0                   
+RepeatVector2 (skipgram_repeat(None, 204, 10, 100)          0                   
+TimeDistributedMerge2 (skipgra((None, 204, 10), ())         0                   
+Activation (pos_tags)         (None, 204, 47)               0                   
+Activation (pos_join)         (None, 204, 73)               0                   
+Activation (deps_join)        (None, 204, 46)               0                   
+Dense (rtypes_last)           (None, 4)                     36                  
+Dense (rsenses_last)          (None, 21)                    903                 
+Activation (pos_tags_2)       (None, 204, 47)               0                   
+Activation (pos_join_2)       (None, 204, 73)               0                   
+Activation (deps_join_2)      (None, 204, 46)               0                   
+Dense (rtypes_last_2)         (None, 4)                     36                  
+Dense (rsenses_last_2)        (None, 21)                    903                 
+Activation (pos_tags_3)       (None, 204, 47)               0                   
+Activation (pos_join_3)       (None, 204, 73)               0                   
+Activation (deps_join_3)      (None, 204, 46)               0                   
+Dense (rtypes_last_3)         (None, 4)                     36                  
+Dense (rsenses_last_3)        (None, 21)                    903                 
+Activation (pos_tags_4)       (None, 204, 47)               0                   
+Activation (pos_join_4)       (None, 204, 73)               0                   
+Activation (deps_join_4)      (None, 204, 46)               0                   
+Dense (rtypes_last_4)         (None, 4)                     36                  
+Dense (rsenses_last_4)        (None, 21)                    903                 
+Activation (pos_tags_5)       (None, 204, 47)               0                   
+Activation (pos_join_5)       (None, 204, 73)               0                   
+Activation (deps_join_5)      (None, 204, 46)               0                   
+Dense (rtypes_last_5)         (None, 4)                     36                  
+Dense (rsenses_last_5)        (None, 21)                    903                 
+TimeDistributedMerge2 (skipgra((None, 204, 10), ())         0                   
+--------------------------------------------------------------------------------
+Total params: 9682891
+--------------------------------------------------------------------------------
+
+=== running on conn_gt_0 ===
+./v21/classifier.py en ./models-v21/conll16st-v21-v21-82-cgt0rand4-en-train /media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29 /tmp/gw0/2016-05-09-09-07-04/output --config={"filter_fn_name":"conn_gt_0", "words2vec_bin":"./data/word2vec-en/GoogleNews-vectors-negative300.bin.gz", "words2brown_txt":"./data/brown-en/brown-rcv1.clean.tokenized-CoNLL03.txt-c1000-freq1.txt"}
+--------------------------------------------------------------------------------
+Layer (name)                  Output Shape                  Param #             
+--------------------------------------------------------------------------------
+Layer (words_input)           (None, 204)                   0                   
+Layer (letters_input)         (None, 1224)                  0                   
+Layer (words2brown_input)     (None, 204)                   0                   
+Layer (focus_input)           (None, 204, 1)                0                   
+Layer (rmarking_io_input)     (None, 204, 5)                0                   
+Layer (words_rand)            (None, 204)                   0                   
+Embedding (words_input_emb)   (None, 204, 100)              4391800             
+Embedding (letters_input_emb_o(None, 1224, 5)               410                 
+Reshape (letters_input_emb)   (None, 204, 30)               0                   
+Embedding (words2brown_input_e(None, 204, 40)               40080               
+Activation (shared_1)         (None, 204, 176)              0                   
+Activation (pos_tags_in)      (None, 204, 176)              0                   
+TimeDistributedDense (pos_tags(None, 204, 47)               8319                
+Activation (pos_tags_out)     (None, 204, 47)               0                   
+Activation (pos_join_in)      (None, 204, 176)              0                   
+TimeDistributedDense (pos_join(None, 204, 73)               12921               
+Activation (pos_join_out)     (None, 204, 73)               0                   
+Activation (deps_join_in)     (None, 204, 176)              0                   
+TimeDistributedDense (deps_joi(None, 204, 46)               8142                
+Activation (deps_join_out)    (None, 204, 46)               0                   
+Activation (rtypes_last_in)   (None, 204, 176)              0                   
+GRU (rtypes_last_fwd)         (None, 4)                     2172                
+GRU (rtypes_last_bck)         (None, 4)                     2172                
+Dense (rtypes_last_out)       (None, 4)                     36                  
+Activation (rsenses_last_in)  (None, 204, 176)              0                   
+GRU (rsenses_last_fwd)        (None, 22)                    13134               
+GRU (rsenses_last_bck)        (None, 22)                    13134               
+Dense (rsenses_last_out)      (None, 22)                    990                 
+GRU (shared_2_gru_fwd_seq)    (None, 204, 100)              83100               
+GRU (shared_2_gru_bck_seq)    (None, 204, 100)              83100               
+TimeDistributedDense (shared_2(None, 204, 100)              37700               
+BatchNormalization (shared_2_n(None, 204, 100)              200                 
+Dropout (shared_2)            (None, 204, 100)              0                   
+Activation (pos_tags_2_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_tags(None, 204, 47)               4747                
+Activation (pos_tags_2_out)   (None, 204, 47)               0                   
+Activation (pos_join_2_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_join(None, 204, 73)               7373                
+Activation (pos_join_2_out)   (None, 204, 73)               0                   
+Activation (deps_join_2_in)   (None, 204, 100)              0                   
+TimeDistributedDense (deps_joi(None, 204, 46)               4646                
+Activation (deps_join_2_out)  (None, 204, 46)               0                   
+Activation (rtypes_last_2_in) (None, 204, 100)              0                   
+GRU (rtypes_last_2_fwd)       (None, 4)                     1260                
+GRU (rtypes_last_2_bck)       (None, 4)                     1260                
+Dense (rtypes_last_2_out)     (None, 4)                     36                  
+Activation (rsenses_last_2_in)(None, 204, 100)              0                   
+GRU (rsenses_last_2_fwd)      (None, 22)                    8118                
+GRU (rsenses_last_2_bck)      (None, 22)                    8118                
+Dense (rsenses_last_2_out)    (None, 22)                    990                 
+GRU (shared_3_gru_fwd_seq)    (None, 204, 100)              60300               
+GRU (shared_3_gru_bck_seq)    (None, 204, 100)              60300               
+TimeDistributedDense (shared_3(None, 204, 100)              30100               
+BatchNormalization (shared_3_n(None, 204, 100)              200                 
+Dropout (shared_3)            (None, 204, 100)              0                   
+Activation (pos_tags_3_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_tags(None, 204, 47)               4747                
+Activation (pos_tags_3_out)   (None, 204, 47)               0                   
+Activation (pos_join_3_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_join(None, 204, 73)               7373                
+Activation (pos_join_3_out)   (None, 204, 73)               0                   
+Activation (deps_join_3_in)   (None, 204, 100)              0                   
+TimeDistributedDense (deps_joi(None, 204, 46)               4646                
+Activation (deps_join_3_out)  (None, 204, 46)               0                   
+Activation (rtypes_last_3_in) (None, 204, 100)              0                   
+GRU (rtypes_last_3_fwd)       (None, 4)                     1260                
+GRU (rtypes_last_3_bck)       (None, 4)                     1260                
+Dense (rtypes_last_3_out)     (None, 4)                     36                  
+Activation (rsenses_last_3_in)(None, 204, 100)              0                   
+GRU (rsenses_last_3_fwd)      (None, 22)                    8118                
+GRU (rsenses_last_3_bck)      (None, 22)                    8118                
+Dense (rsenses_last_3_out)    (None, 22)                    990                 
+GRU (shared_4_gru_fwd_seq)    (None, 204, 100)              60300               
+GRU (shared_4_gru_bck_seq)    (None, 204, 100)              60300               
+TimeDistributedDense (shared_4(None, 204, 100)              30100               
+BatchNormalization (shared_4_n(None, 204, 100)              200                 
+Dropout (shared_4)            (None, 204, 100)              0                   
+Activation (pos_tags_4_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_tags(None, 204, 47)               4747                
+Activation (pos_tags_4_out)   (None, 204, 47)               0                   
+Activation (pos_join_4_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_join(None, 204, 73)               7373                
+Activation (pos_join_4_out)   (None, 204, 73)               0                   
+Activation (deps_join_4_in)   (None, 204, 100)              0                   
+TimeDistributedDense (deps_joi(None, 204, 46)               4646                
+Activation (deps_join_4_out)  (None, 204, 46)               0                   
+Activation (rtypes_last_4_in) (None, 204, 100)              0                   
+GRU (rtypes_last_4_fwd)       (None, 4)                     1260                
+GRU (rtypes_last_4_bck)       (None, 4)                     1260                
+Dense (rtypes_last_4_out)     (None, 4)                     36                  
+Activation (rsenses_last_4_in)(None, 204, 100)              0                   
+GRU (rsenses_last_4_fwd)      (None, 22)                    8118                
+GRU (rsenses_last_4_bck)      (None, 22)                    8118                
+Dense (rsenses_last_4_out)    (None, 22)                    990                 
+GRU (shared_5_gru_fwd_seq)    (None, 204, 100)              60300               
+GRU (shared_5_gru_bck_seq)    (None, 204, 100)              60300               
+TimeDistributedDense (shared_5(None, 204, 100)              30100               
+BatchNormalization (shared_5_n(None, 204, 100)              200                 
+Dropout (shared_5)            (None, 204, 100)              0                   
+Activation (pos_tags_5_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_tags(None, 204, 47)               4747                
+Activation (pos_tags_5_out)   (None, 204, 47)               0                   
+Activation (pos_join_5_in)    (None, 204, 100)              0                   
+TimeDistributedDense (pos_join(None, 204, 73)               7373                
+Activation (pos_join_5_out)   (None, 204, 73)               0                   
+Activation (deps_join_5_in)   (None, 204, 100)              0                   
+TimeDistributedDense (deps_joi(None, 204, 46)               4646                
+Activation (deps_join_5_out)  (None, 204, 46)               0                   
+Activation (rtypes_last_5_in) (None, 204, 100)              0                   
+GRU (rtypes_last_5_fwd)       (None, 4)                     1260                
+GRU (rtypes_last_5_bck)       (None, 4)                     1260                
+Dense (rtypes_last_5_out)     (None, 4)                     36                  
+Activation (rsenses_last_5_in)(None, 204, 100)              0                   
+GRU (rsenses_last_5_fwd)      (None, 22)                    8118                
+GRU (rsenses_last_5_bck)      (None, 22)                    8118                
+Dense (rsenses_last_5_out)    (None, 22)                    990                 
+Embedding (words_rand_emb)    (None, 204, 100)              4391800             
+RollOffsets (words_rand_emb_of(None, 204, 10, 100)          0                   
+RepeatVector2 (skipgram_repeat(None, 204, 10, 100)          0                   
+TimeDistributedMerge2 (skipgra((None, 204, 10), ())         0                   
+Activation (pos_tags)         (None, 204, 47)               0                   
+Activation (pos_join)         (None, 204, 73)               0                   
+Activation (deps_join)        (None, 204, 46)               0                   
+Dense (rtypes_last)           (None, 4)                     36                  
+Dense (rsenses_last)          (None, 22)                    990                 
+Activation (pos_tags_2)       (None, 204, 47)               0                   
+Activation (pos_join_2)       (None, 204, 73)               0                   
+Activation (deps_join_2)      (None, 204, 46)               0                   
+Dense (rtypes_last_2)         (None, 4)                     36                  
+Dense (rsenses_last_2)        (None, 22)                    990                 
+Activation (pos_tags_3)       (None, 204, 47)               0                   
+Activation (pos_join_3)       (None, 204, 73)               0                   
+Activation (deps_join_3)      (None, 204, 46)               0                   
+Dense (rtypes_last_3)         (None, 4)                     36                  
+Dense (rsenses_last_3)        (None, 22)                    990                 
+Activation (pos_tags_4)       (None, 204, 47)               0                   
+Activation (pos_join_4)       (None, 204, 73)               0                   
+Activation (deps_join_4)      (None, 204, 46)               0                   
+Dense (rtypes_last_4)         (None, 4)                     36                  
+Dense (rsenses_last_4)        (None, 22)                    990                 
+Activation (pos_tags_5)       (None, 204, 47)               0                   
+Activation (pos_join_5)       (None, 204, 73)               0                   
+Activation (deps_join_5)      (None, 204, 46)               0                   
+Dense (rtypes_last_5)         (None, 4)                     36                  
+Dense (rsenses_last_5)        (None, 22)                    990                 
+TimeDistributedMerge2 (skipgra((None, 204, 10), ())         0                   
+--------------------------------------------------------------------------------
+Total params: 9688102
+--------------------------------------------------------------------------------
+
+Finished

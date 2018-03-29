@@ -1,0 +1,5 @@
+/mnt/nfs/tira/data/runs/conll16-st-test-en-2016-03-29/clac/2016-05-03-16-29-05/output
+├── [682K]  output-baseline.json
+└── [895K]  output.json
+
+0 directories, 2 files
