@@ -1,0 +1,5 @@
+Loading file '/media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29/parses.json'... done
+Loading file '/media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29/relations-no-senses.json'... done
+Loading /usr/local/lib/python2.7/dist-packages/dsenser/data/brown_cluster_1000.txt... done
+Invalid parse tree for sentence 3
+Invalid parse tree for sentence 3
