@@ -15,23 +15,50 @@
 \DeclareMathOperator{\sgn}{sgn}
 
 
-\author{Malte Klingenberg, 794394}
-\title{Customer review rating prediction}
+\author{Paul Opuchlich, 794745\\Malte Klingenberg, 794394}
+\title{Shallow Discourse Parser Comparison and Combination}
 \date{}
 \begin{document}
 \pagenumbering{gobble}
 \maketitle
 
 \section*{Introduction}
+lot of development in discourse parsing (short overview?)
 
+parsers have gotten better, but are still far from perfect
+
+many parsers available, maybe some better at some things than others
+
+goal: compare parsers, find a way to combine them to give better results
 \section*{Dataset}
-CoNLL \cite{xue2016conll}
-\section*{Approach}
+CoNLL challenge \cite{xue2016conll}
 
+incomplete data (sense-only), generate dummy data (see below)
+
+used parsers (differences, some only guess a limited number of senses)
+\section*{Approach}
+Preprocessing and Randomising
+
+Mapping the Relations (using CoNLL methods)
+
+Calculate Parameters for each Parser + Relation, some evaluation
+
+Create combined model by different voting approaches (best-wins, weighted...)
 \section*{Evaluation}
+general overview
+
+agreement between three parsers
+
+compare performances of all parsers
+
+relationship between architecture and results?
+
+combination (different approaches)
 
 \section*{Conclusion}
+parsers are(n't) good at different things
 
+combination (does not) improve results
 
 \pagebreak
 \bibliography{projectreport}
