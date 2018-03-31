@@ -8,6 +8,7 @@
 \usepackage{moreverb}
 \usepackage{graphicx}
 \usepackage{setspace}
+\usepackage{hyperref}
 
 \usepackage{etoolbox}
 \patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
@@ -36,7 +37,7 @@ Our goal in this project was to compare the performances of several different pa
 %%%%% DATASET %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Dataset and Parsers}
-For our project, we used data from the 2016 CoNLL shared task \cite{xue2016conll}. We were graciously provided with the output of all submitted parsers for the sense-only challenge, but could not obtain full data including the argument spans. Because only few parsers were publicly available and we were only able to run two \textbf{[CHECK]} of them, we limited our analysis to sense identification.
+For our project, we used data from the 2016 CoNLL shared task \cite{xue2016conll}. We were graciously provided with the output of all submitted parsers for the sense-only challenge, but could not obtain full data including the argument spans. Because only few parsers were publicly available and we were only able to run two of them, we limited our analysis to sense identification.
 
 The methods we used for analysing the sense identification performance can also be used for the argument spans. Below, we present a way to create dummy data for testing purposes. If full data should become available, the analysis can easily be extended to include the argument spans.
 
@@ -62,9 +63,12 @@ We then used the F1 scores to implement several methods of combining the parser 
 \item \textbf{best three agreement:} Same as agreement, but only take into account the three identified senses with the highest F1 score.
 \end{itemize}
 
+Our code can be found as commented IPython/Jupyter notebooks at \url{https://github.com/PaulOpu/sdp-project/tree/master/Coding}.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% EVALUATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
 \section*{Evaluation}
 As a first step, we looked at the inter-parser agreement to get a grasp on the individual and group performance of the parsers. Table \ref{tab:comp1} shows the inter-parser sense agreement between the three highest scoring parsers ''oslopots'', ''ecnucs'' and ''steven''.
 
@@ -162,9 +166,9 @@ Temp.Synchrony 		 & 60 & 40 & 58 & 18 & 52 & 22 \\
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\textit{compare performances of all parsers}
+Finally, the F1 scores for all parsers and relations senses are shown in table \ref{tab:comp4}. Also shown is the underlying machine learning concept of each parser as listed in \cite{xue2016conll}. We can again identify that some senses seem to be more difficult than others as they have low F1 scores for all parsers. Concessions, results, and restatements again appear to be the most difficult senses to identify, while, for example, contrasts and conjunctions appeared to be more easy to classify.
 
-\textit{relationship between architecture and results?}
+Because the architectures of the parsers vary greatly, we were not able to form meaningful categories for performance comparison as the same machine learning method may be applied in different ways. Moreover, some of the parsers used additional support materials and may therefore not be directly comparable to other parsers using the same machine learning method. Also, not all teams that submitted a parser to the CoNLL shared task also submitted a system paper describing their approach.
 
 \paragraph*{Combination approaches}
 
@@ -181,21 +185,21 @@ While the improvements made by combining the parsers are not huge, they are sign
 \begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l|}
  & steven & oslopots & ecnucs & tao0920 & goethe & nguyenlab & clac & PurdueNLP & gw0 & ykido & gtnlp\\ \hline
 sense & - & SVM & linear, CNN & SVM, CNN & SVM, FF-NN & random forest & CRF, CNN & SVM, FF-NN & RNN & SVM & - \\ \hline
-Comp.Concession 	 & 0.0746\\
-Comp.Contrast 		 & 0.2560\\
-Cont.Cause.Reason 	 & 0.1429\\
-Cont.Cause.Result 	 & 0.1557\\
-Cont.Condition 		 & 0.2937\\
-EntRel 				 & 0.1943\\
-Exp.Alternative 	 & 0.2500\\
-Exp.Conjunction 	 & 0.2176\\
-Exp.Instantiation    & 0.1339\\
-Exp.Restatement 	 & 0.0148\\
-Temp.Asyn.Precedence & 0.2524\\
-Temp.Asyn.Succession & 0.2252\\
-Temp.Synchrony 		 & 0.1701\\ \hline
+Comp.Concession 	 & 0.0746 & 0.2000 & 0.1897 & 0.2258 & 0.1538 & 0.1571 & 0.1400 & 0.2131 & 0 & 0.3784 & 0.4070\\
+Comp.Contrast 		 & 0.2560 & 0.3665 & 0.3366 & 0.3467 & 0.3250 & 0.3580 & 0.3292 & 0.3375 & 0.0073 & 0.3468 & 0.3526\\
+Cont.Cause.Reason 	 & 0.1429 & 0.2556 & 0.2363 & 0.2522 & 0.2332 & 0.2048 & 0.2088 & 0.2371 & 0.0423 & 0.1842 & 0.2538\\
+Cont.Cause.Result 	 & 0.1557 & 0.2222 & 0.1805 & 0.1946 & 0.2258 & 0.2064 & 0.1803 & 0.1717 & 0 & 0.2241 & 0.2136\\
+Cont.Condition 		 & 0.2937 & 0.4375 & 0.4019 & 0.4112 & 0.3810 & 0.4128 & 0.3700 & 0.3832 & 0 & 0.4273 & 0.4370\\
+EntRel 				 & 0.1943 & 0.2357 & 0.2597 & 0.2700 & 0.2347 & 0.2458 & 0.2008 & 0.2611 & 0 & 0.1733 & 0.2546\\
+Exp.Alternative 	 & 0.2500 & 0.4000 & 0.3333 & 0.3846 & 0.4444 & 0.4545 & 0.4545 & 0.4000 & 0 & 0.3333 & 0.4545\\
+Exp.Conjunction 	 & 0.2176 & 0.3372 & 0.3277 & 0.3248 & 0.3239 & 0.3203 & 0.2914 & 0.3051 & 0.1168 & 0.3259 & 0.3241\\
+Exp.Instantiation    & 0.1339 & 0.2481 & 0.3121 & 0.3099 & 0.2484 & 0.1890 & 0.1574 & 0.2432 & 0 & 0.1574 & 0.2785\\
+Exp.Restatement 	 & 0.0148 & 0.1250 & 0.1608 & 0.1278 & 0.1470 & 0.0906 & 0.0889 & 0.1085 & 0.1440 & 0.0234 & 0.1037\\
+Temp.Asyn.Precedence & 0.2524 & 0.4250 & 0.3647 & 0.3827 & 0.3418 & 0.4198 & 0.3816 & 0.3684 & 0 & 0.3784 & 0.4070\\
+Temp.Asyn.Succession & 0.2252 & 0.3694 & 0.3204 & 0.3694 & 0.3426 & 0.3534 & 0.2887 & 0.3113 & 0 & 0.3030 & 0.3030\\
+Temp.Synchrony 		 & 0.1701 & 0.3063 & 0.3110 & 0.3000 & 0.3082 & 0.3164 & 0.2988 & 0.3195 & 0.0721 & 0.3193 & 0.3000\\ \hline
 \end{tabular}}
-\caption{text}
+\caption{F1 scores for all parsers and relation senses. Parser architectures were taken from \cite{xue2016conll}. The low values for gw0 result from the fact that that parser had a smaller sense set.}
 \label{tab:comp4}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -255,11 +259,13 @@ Overall 			 & 0.5485 & 0.5476 & 0.5480 & 0.5360 & 0.5352 & 0.5356 & 0.5423 & 0.5
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% CONCLUSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
 \section*{Conclusion}
-\textit{architecture <-> performance}
+Because the parser architectures varied greatly, we were not able to identify any systematic relationsships between parser architecture or underlying machine learning method and sense classification performance on certain relation senses. We also only had access to the sense-only data and could therefore not extend our analysis to the argument spans predicted by the parsers. We were, however, able to identify similarities across all parsers regarding the overall ''difficulty'' of certain relation senses, with some senses being more difficult to identify reliably for all parsers than other senses.
 
-In this project we have shown that using simple statistical methods to combine several different parsers can slightly increase the sense classification accuracy. The improvement is not that large because for the ''easy'' senses most of the parsers already agreed, while there was nothing we could do in cases where all or most of the parsers calculated a wrong sense. Nevertheless, we were able to improve the accuracy by 0.75\% compared to the best parser submitted to the CoNLL shared task.
+Furthermore, we have shown that using simple statistical methods to combine several different parsers can slightly increase the sense classification accuracy. The improvement is not that large because for the ''easy'' senses most of the parsers already agreed, while there was nothing we could do in cases where all or most of the parsers calculated a wrong sense. Nevertheless, we were able to improve the accuracy by 0.75\% compared to the best parser submitted to the CoNLL shared task.
 
+In the end, our possibilities for analysis were limited by the data available to us. Repeating this investigation with more data may give further interesting insights.
 \pagebreak
 \bibliography{projectreport}
 \bibliographystyle{apalike}
