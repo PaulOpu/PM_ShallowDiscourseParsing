@@ -130,13 +130,47 @@ Temp.Synchrony 		 & 84 & 49 & 3 & 2 & 88 & 51 & 9 & 4 & 71 & 25 & 3 & 1\\
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Table \ref{tab:comp3} shows the pairwise agreement between the three parsers. The column ''one correct'' is the number of relations correctly identified by at least one of the two parsers, while ''both correct'' counts the times the parsers agreed on the right answer. In general, the agreement between the oslopots and ecnucs parsers is higher than the agreement between the steven parser and either of the two others. This reflects the fact found above that there are only few cases where the steven parser is the only one to get the relation sense right.
+
+This also has implications on the combination approaches, in particular the best-three-agreement method. If two parsers often both correctly identify a sense, adding a third parser to the combination will rarely improve the accuracy, but may actually worsen it by amplifying the wrong decision in a case where the original two parsers did not come up with the same relation sense.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|r|r||r|r||r|r}
+\multicolumn{1}{ }{ } & \multicolumn{2}{|c||}{oslopots/ecnucs} & \multicolumn{2}{|c||}{ecnucs/steven} & \multicolumn{2}{c}{oslopots/steven} \\
+sense & one correct & both correct & one correct & both correct & one correct & both correct \\ \hline
+
+Comp.Concession 	 & 13 & 10 & 13 & 3 & 13 & 4\\
+Comp.Contrast 		 & 284 & 202 & 274 & 146 & 274 & 154\\
+Cont.Cause.Reason 	 & 116 & 58 & 95 & 29 & 98 & 36\\
+Cont.Cause.Result 	 & 55 & 24 & 55 & 15 & 47 & 28\\
+Cont.Condition 		 & 51 & 41 & 48 & 32 & 51 & 35\\
+EntRel 				 & 194 & 103 & 158 & 64 & 189 & 90\\
+Exp.Alternative 	 & 5 & 2 & 4 & 1 & 5 & 1\\
+Exp.Conjunction 	 & 307 & 188 & 286 & 123 & 304 & 138\\
+Exp.Instantiation    & 55 & 27 & 51 & 15 & 35 & 15\\
+Exp.Restatement 	 & 83 & 12 & 57 & 1 & 42 & 1\\
+Temp.Asyn.Precedence & 37 & 28 & 36 & 21 & 37 & 23\\
+Temp.Asyn.Succession & 43 & 31 & 42 & 16 & 44 & 22\\
+Temp.Synchrony 		 & 60 & 40 & 58 & 18 & 52 & 22 \\ 
+
+\end{tabular}}
+\caption{Pairwise agreement between the three parsers. ''one correct'' includes relations correctly identified by both parsers (''both correct'')}
+\label{tab:comp3}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \textit{compare performances of all parsers}
 
 \textit{relationship between architecture and results?}
 
-The results of our combination approaches are shown in tables \ref{tab:ours1} and \ref{tab:ours2}. The ''best wins'' approach gave the worst results, with the overall F1 score being 11\% lower than the oslopots results. This might be because selecting only one parser can skip over the good parsers and select one that gave good results in training, but performs poorly on the test data. The other results are all close to the oslopots score. Probability maximisation and best three agreement both give slightly worse results than the oslopots parser, probably due to the same problems as mentioned above.
+\paragraph*{Combination approaches}
 
-The agreement method however, where a simple majority voting between the parsers is utilised, improves the overeall F1 score by about 1\%. While the F1 scores for individual relation senses might decrease slightly (not more than 1\%), for some senses it increases by several percent, for example for Temporal.Asynchronous.Precedence (0.8261 $\rightarrow$ 0.8571). \textbf{[EXPAND?]}
+The results of our combination approaches are shown in tables \ref{tab:ours1} and \ref{tab:ours2}. The ''best wins'' approach gave the worst results, with the overall F1 score being 11\% lower than the oslopots results. This might be because selecting only one parser can skip over the good parsers and select one that gave good results in training, but performs poorly on the test data. The other results are all close to the oslopots score. Probability maximisation and best three agreement both give slightly worse results than the oslopots parser, probably due to the same problems as mentioned above. This might also be because, as mentioned above, if two parsers already agree in many cases, adding further parsers may actually decrease the overall accuracy.
+
+The agreement method however, where a simple majority voting between the parsers is utilised, improves the overeall F1 score by about 1\%. While the F1 scores for individual relation senses might decrease slightly (not more than 1\%), for some senses it increases by several percent, for example for Temporal.Asynchronous.Precedence (0.8261 $\rightarrow$ 0.8571).
 
 While the improvements made by combining the parsers are not huge, they are significant and can be used if further slight improvement of the results is desired.
 
