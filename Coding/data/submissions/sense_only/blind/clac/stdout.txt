@@ -1,0 +1,56 @@
+./sense_classification.sh /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29 /tmp/clac/2016-05-04-03-21-53/output
+
+
+ConllEvaluationSense.main()
+
+Training model launched with the following arguments:
+                   APPEND --> True
+               BATCH_SIZE --> 128
+           BATCH_SIZE_DEV --> 200
+           DISCOURSE_TYPE --> ['Implicit', 'AltLex', 'EntRel']
+        DROPOUT_KEEP_PROB --> 0.5
+            EMBEDDING_DIM --> 300
+           EVALUATE_EVERY --> 100
+             FILTER_SIZES --> 3,4,5
+            L2_REG_LAMBDA --> 0.0
+                 LOG_FILE --> False
+       MAX_DISCOURSE_PERC --> 0.995
+               MODEL_TYPE --> flat
+               NUM_EPOCHS --> 100
+              NUM_FILTERS --> 128
+                   OUTPUT --> /tmp/clac/2016-05-04-03-21-53/output/output.json
+              PRINT_EVERY --> 10
+              RANDOM_INIT --> True
+         RANDOM_INIT_ONLY --> False
+                  RUN_DIR --> 
+                  RUN_MSG --> None
+               SAVE_CONLL --> True
+               SAVE_MODEL --> False
+              SPLIT_TRAIN --> False
+                TEST_DATA --> /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29/relations-no-senses.json
+            TEST_OR_TRAIN --> test
+               TRAIN_DATA --> data_train/train_relations.json
+           WORD_EMBEDDING --> embeddings/google_news300.bin.gz
+
+Training relation types: 
+['Implicit', 'AltLex', 'EntRel']
+
+Test relation types: 
+['Implicit', 'AltLex', 'EntRel']
+
+Classifications: 
+['Temporal.Asynchronous', 'Temporal.Asynchronous.Precedence', 'Temporal.Asynchronous.Succession', 'Temporal.Synchrony', 'Contingency.Cause', 'Contingency.Cause.Reason', 'Contingency.Cause.Result', 'Contingency.Condition', 'Comparison.Contrast', 'Comparison.Concession', 'Expansion.Conjunction', 'Expansion.Instantiation', 'Expansion.Restatement', 'Expansion.Alternative', 'Expansion.Alternative.Chosen alternative', 'Expansion.Exception', 'EntRel']
+Network object restored from /home/clac/non_ex_parser/models/flat/network_model.pickle
+Loading testing discourses
+Could not process data from embeddings/flat_vec_model_27721.pickle : [Errno 2] No such file or directory: 'embeddings/flat_vec_model_27721.pickle'
+Creating vector vocab instead
+loading word2vec model in gensim
+building word vector vocab
+Tensor graph model restored from /home/clac/non_ex_parser/models/flat/model
+
+Evaluation:
+2016-05-04T03:30:34.157847: step 9000, loss 0, acc 0
+Elapsed time since beginning: 381 seconds
+
+Saved results as CoNLL json to here:  /tmp/clac/2016-05-04-03-21-53/output/output.json
+Application quit gracefully, did not make a scene

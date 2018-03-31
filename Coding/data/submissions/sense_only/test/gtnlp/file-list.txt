@@ -1,0 +1,4 @@
+/mnt/nfs/tira/data/runs/conll16-st-test-en-2016-03-29/gtnlp/2016-05-03-20-42-32/output
+└── [650K]  output.json
+
+0 directories, 1 file

@@ -1,0 +1,11 @@
+/mnt/nfs/tira/data/runs/conll16-st-test-en-2016-03-29/nguyenlab/2016-05-01-11-56-08/output
+├── [1.3M]  output.json
+└── [4.0K]  tmp_output
+    ├── [917K]  dev-explicit.arff
+    ├── [1.2M]  dev-implicit.arff
+    ├── [ 18K]  dev_relation_map.json
+    ├── [ 18K]  dev_relation_map_implicit.json
+    ├── [602K]  out-explicit.json
+    └── [691K]  out-implicit.json
+
+1 directory, 7 files

@@ -1,0 +1,31 @@
+python one_click.py -c /media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29 -o /tmp/PurdueNLP/2016-05-09-08-10-23/output
+
+
+ParserConfig.__ROOT__ = /home/PurdueNLP/Discourse-Parsing/
+ParserConfig.__PARSE_ROOT__ = /media/training-datasets/discourse-relation-sense-classification/
+ParserConfig.__EVENT_EMBEDDINGS__ = /home/PurdueNLP/data/wikipedia_event_embeddings_cpu.txt
+Extracting all document info from parses.json.
+Updating event information in documents...
+Loading event embeddings...
+Max number of events seen in a sentence: 11
+ParserConfig.__ROOT__ = /home/PurdueNLP/Discourse-Parsing/
+ParserConfig.__PARSE_ROOT__ = /media/training-datasets/discourse-relation-sense-classification/
+ParserConfig.__EVENT_EMBEDDINGS__ = /home/PurdueNLP/data/wikipedia_event_embeddings_cpu.txt
+Extracting all document info from parses.json.
+
+warning: files in /tmp/PurdueNLP/2016-05-09-08-10-23/output will be overwritten.
+Parsing events and words...
+
+building vocabulary...
+Vocabulary of size 7247
+parsing word vectors...
+
+1939 (1939, 2, 300) (1939, 2, 12600)
+testing set: (1939, 2, 300) (1939, 2, 12600)
+total number of classes: 14
+Building network events-words-2
+command executed
+Parsing test file /home/PurdueNLP/Discourse-Parsing/parser_output/feature/explicit_clf_feature_test.txt
+Parsed train examples: 953
+Number of features: 6200
+Replacing NaN with 0 and inf with finite numbers...

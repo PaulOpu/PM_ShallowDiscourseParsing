@@ -1,0 +1,4 @@
+/mnt/nfs/tira/data/runs/conll16-st-test-en-2016-03-29/goethe/2016-05-02-12-23-06/output
+└── [652K]  output.json
+
+0 directories, 1 file

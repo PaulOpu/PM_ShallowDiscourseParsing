@@ -1,0 +1,474 @@
+Using Theano backend.
+[2016-05-09 09:08] configuration (./models-v21/conll16st-v21-v21-81-ceq0wd100sd100-en-train)
+[2016-05-09 09:08]     config 'epochs':  (1000)
+[2016-05-09 09:08]     config 'epochs_patience':  (20)
+[2016-05-09 09:08]     config 'epochs_len':  (-1)
+[2016-05-09 09:08]     config 'batch_size':  (64)
+[2016-05-09 09:08]     config 'batch_size_valid':  (128)
+[2016-05-09 09:08]     config 'snapshot_size':  (2000)
+[2016-05-09 09:08]     config 'optimizer':  (adam)
+[2016-05-09 09:08]     config 'words2vec_bin': ./data/word2vec-en/GoogleNews-vectors-negative300.bin.gz (None)
+[2016-05-09 09:08]     config 'words2vec_txt':  (None)
+[2016-05-09 09:08]     config 'words2vec_size':  (300)
+[2016-05-09 09:08]     config 'words2brown_txt': ./data/brown-en/brown-rcv1.clean.tokenized-CoNLL03.txt-c1000-freq1.txt (None)
+[2016-05-09 09:08]     config 'words2brown_emb_dim':  (40)
+[2016-05-09 09:08]     config 'random_per_sample':  (1)
+[2016-05-09 09:08]     config 'word_crop':  (200)
+[2016-05-09 09:08]     config 'padding_pre':  (20)
+[2016-05-09 09:08]     config 'padding_post':  (20)
+[2016-05-09 09:08]     config 'letter_size':  (3)
+[2016-05-09 09:08]     config 'skipgram_window_size':  (5)
+[2016-05-09 09:08]     config 'skipgram_negative_samples':  (5)
+[2016-05-09 09:08]     config 'filter_fn_name': conn_eq_0 (conn_eq_0)
+[2016-05-09 09:08]     config 'embedding_dim':  (100)
+[2016-05-09 09:08]     config 'shared_dim':  (100)
+[2016-05-09 09:08]     config 'dropout_shared':  (0.25)
+[2016-05-09 09:08]     config 'dropout_emb':  (0.33)
+[2016-05-09 09:08]     config 'dropout_W':  (0.33)
+[2016-05-09 09:08]     config 'dropout_U':  (0.66)
+[2016-05-09 09:08]     config 'shared_mode':  (gru_fwd_seq,gru_bck_seq,prev)
+[2016-05-09 09:08]   args.model_dir: ./models-v21/conll16st-v21-v21-81-ceq0wd100sd100-en-train
+[2016-05-09 09:08]   args.dataset_dir: /media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29
+[2016-05-09 09:08]   args.output_dir: /tmp/gw0/2016-05-09-09-07-04/output
+[2016-05-09 09:08]   K._config: {u'epsilon': 1e-07, u'floatx': u'float32', u'backend': u'theano'}
+[2016-05-09 09:08]   os.getenv("THEANO_FLAGS"): mode=FAST_COMPILE
+[2016-05-09 09:08]   words2id_size: 50000
+[2016-05-09 09:08]   letter_offsets: [0, 1, 2, -3, -2, -1]
+[2016-05-09 09:08]   skipgram_offsets: [-2, -1, 0, 1, 2, 200, 201, 202, 203, 204]
+[2016-05-09 09:08]   filter_types: None
+[2016-05-09 09:08]   filter_senses: None
+[2016-05-09 09:08]   filter_fn_name: conn_eq_0
+[2016-05-09 09:08]   max_len: 204
+[2016-05-09 09:08]   config: {u'words2vec_bin': u'./data/word2vec-en/GoogleNews-vectors-negative300.bin.gz', u'words2brown_txt': u'./data/brown-en/brown-rcv1.clean.tokenized-CoNLL03.txt-c1000-freq1.txt', u'filter_fn_name': u'conn_eq_0'}
+[2016-05-09 09:08]     config 'words_input':  (True)
+[2016-05-09 09:08]     config 'words_input:embedding_dim':  (100)
+[2016-05-09 09:08]     config 'words_input:dropout_emb':  (0.33)
+[2016-05-09 09:08]     config 'letters_input':  (True)
+[2016-05-09 09:08]     config 'letters_input:embedding_dim':  (5)
+[2016-05-09 09:08]     config 'letters_input:dropout_emb':  (0.33)
+[2016-05-09 09:08]     config 'words2vec_input':  (False)
+[2016-05-09 09:08]     config 'words2brown_input':  (True)
+[2016-05-09 09:08]     config 'words2brownonehot_input':  (False)
+[2016-05-09 09:08]     config 'focus_input':  (True)
+[2016-05-09 09:08]     config 'rmarking_io_input':  (True)
+[2016-05-09 09:08]     config 'rmarking_io_input:rel_marking2id_mode':  (IO)
+[2016-05-09 09:08]     config 'skipgram':  (True)
+[2016-05-09 09:08]     config 'skipgram:embedding_dim':  (100)
+[2016-05-09 09:08]     config 'skipgram:dropout_emb':  (0.33)
+[2016-05-09 09:08]     config 'skipgram:loss':  (binary_crossentropy)
+[2016-05-09 09:08]     config 'rmarking':  (False)
+[2016-05-09 09:08]     config 'pos_tags':  (True)
+[2016-05-09 09:08]     config 'pos_tags:in':  (1)
+[2016-05-09 09:08]     config 'pos_tags:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'pos_tags:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'pos_parents':  (False)
+[2016-05-09 09:08]     config 'pos_join':  (True)
+[2016-05-09 09:08]     config 'pos_join:in':  (1)
+[2016-05-09 09:08]     config 'pos_join:out_activation':  (sigmoid)
+[2016-05-09 09:08]     config 'pos_join:loss':  (binary_crossentropy)
+[2016-05-09 09:08]     config 'pos_join:pos_join_low':  (0)
+[2016-05-09 09:08]     config 'pos_join:pos_join_high':  (None)
+[2016-05-09 09:08]     config 'deps_join':  (True)
+[2016-05-09 09:08]     config 'deps_join:in':  (1)
+[2016-05-09 09:08]     config 'deps_join:out_activation':  (sigmoid)
+[2016-05-09 09:08]     config 'deps_join:loss':  (binary_crossentropy)
+[2016-05-09 09:08]     config 'rtypes_last':  (True)
+[2016-05-09 09:08]     config 'rtypes_last:in':  (1)
+[2016-05-09 09:08]     config 'rtypes_last:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'rtypes_last:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'rsenses_last':  (True)
+[2016-05-09 09:08]     config 'rsenses_last:in':  (1)
+[2016-05-09 09:08]     config 'rsenses_last:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'rsenses_last:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'rtypes_seq_none':  (False)
+[2016-05-09 09:08]     config 'rtypes_seq_focus':  (False)
+[2016-05-09 09:08]     config 'focus_ret':  (False)
+[2016-05-09 09:08]     config 'pos_tags_2':  (True)
+[2016-05-09 09:08]     config 'pos_tags_2:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'pos_tags_2:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'pos_join_2':  (True)
+[2016-05-09 09:08]     config 'pos_join_2:out_activation':  (sigmoid)
+[2016-05-09 09:08]     config 'pos_join_2:loss':  (binary_crossentropy)
+[2016-05-09 09:08]     config 'pos_join_2:pos_join_low':  (0)
+[2016-05-09 09:08]     config 'pos_join_2:pos_join_high':  (None)
+[2016-05-09 09:08]     config 'deps_join_2':  (True)
+[2016-05-09 09:08]     config 'deps_join_2:out_activation':  (sigmoid)
+[2016-05-09 09:08]     config 'deps_join_2:loss':  (binary_crossentropy)
+[2016-05-09 09:08]     config 'rtypes_last_2':  (True)
+[2016-05-09 09:08]     config 'rtypes_last_2:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'rtypes_last_2:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'rsenses_last_2':  (True)
+[2016-05-09 09:08]     config 'rsenses_last_2:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'rsenses_last_2:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'pos_tags_3':  (True)
+[2016-05-09 09:08]     config 'pos_tags_3:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'pos_tags_3:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'pos_join_3':  (True)
+[2016-05-09 09:08]     config 'pos_join_3:out_activation':  (sigmoid)
+[2016-05-09 09:08]     config 'pos_join_3:loss':  (binary_crossentropy)
+[2016-05-09 09:08]     config 'pos_join_3:pos_join_low':  (0)
+[2016-05-09 09:08]     config 'pos_join_3:pos_join_high':  (None)
+[2016-05-09 09:08]     config 'deps_join_3':  (True)
+[2016-05-09 09:08]     config 'deps_join_3:out_activation':  (sigmoid)
+[2016-05-09 09:08]     config 'deps_join_3:loss':  (binary_crossentropy)
+[2016-05-09 09:08]     config 'rtypes_last_3':  (True)
+[2016-05-09 09:08]     config 'rtypes_last_3:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'rtypes_last_3:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'rsenses_last_3':  (True)
+[2016-05-09 09:08]     config 'rsenses_last_3:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'rsenses_last_3:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'pos_tags_4':  (True)
+[2016-05-09 09:08]     config 'pos_tags_4:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'pos_tags_4:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'pos_join_4':  (True)
+[2016-05-09 09:08]     config 'pos_join_4:out_activation':  (sigmoid)
+[2016-05-09 09:08]     config 'pos_join_4:loss':  (binary_crossentropy)
+[2016-05-09 09:08]     config 'pos_join_4:pos_join_low':  (0)
+[2016-05-09 09:08]     config 'pos_join_4:pos_join_high':  (None)
+[2016-05-09 09:08]     config 'deps_join_4':  (True)
+[2016-05-09 09:08]     config 'deps_join_4:out_activation':  (sigmoid)
+[2016-05-09 09:08]     config 'deps_join_4:loss':  (binary_crossentropy)
+[2016-05-09 09:08]     config 'rtypes_last_4':  (True)
+[2016-05-09 09:08]     config 'rtypes_last_4:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'rtypes_last_4:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'rsenses_last_4':  (True)
+[2016-05-09 09:08]     config 'rsenses_last_4:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'rsenses_last_4:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'pos_tags_5':  (True)
+[2016-05-09 09:08]     config 'pos_tags_5:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'pos_tags_5:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'pos_join_5':  (True)
+[2016-05-09 09:08]     config 'pos_join_5:out_activation':  (sigmoid)
+[2016-05-09 09:08]     config 'pos_join_5:loss':  (binary_crossentropy)
+[2016-05-09 09:08]     config 'pos_join_5:pos_join_low':  (0)
+[2016-05-09 09:08]     config 'pos_join_5:pos_join_high':  (None)
+[2016-05-09 09:08]     config 'deps_join_5':  (True)
+[2016-05-09 09:08]     config 'deps_join_5:out_activation':  (sigmoid)
+[2016-05-09 09:08]     config 'deps_join_5:loss':  (binary_crossentropy)
+[2016-05-09 09:08]     config 'rtypes_last_5':  (True)
+[2016-05-09 09:08]     config 'rtypes_last_5:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'rtypes_last_5:loss':  (categorical_crossentropy)
+[2016-05-09 09:08]     config 'rsenses_last_5':  (True)
+[2016-05-09 09:08]     config 'rsenses_last_5:out_activation':  (softmax)
+[2016-05-09 09:08]     config 'rsenses_last_5:loss':  (categorical_crossentropy)
+[2016-05-09 09:08] load dataset for prediction (/media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29)
+[2016-05-09 09:09]   /media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29: doc_ids: 91, words: 55453, rel_ids: 953, relation tokens: 28798
+[2016-05-09 09:09]   words2brown: 1002, rel_marking_io2id: 5, letters2id: 82, rel_types2id: 4, focus2id: 1, deps2id: 46, rel_senses2id: 21, pos_tags2id: 47, pos_join2id: 73, words2id: 43918
+[2016-05-09 09:09] build model (31 tasks in 5 shared layers)
+[2016-05-09 09:09]   words_input
+[2016-05-09 09:09]   letters_input
+[2016-05-09 09:09]   words2brown_input
+[2016-05-09 09:09]   focus_input
+[2016-05-09 09:09]   rmarking_io_input
+[2016-05-09 09:09]   pos_tags
+[2016-05-09 09:09]   pos_join
+[2016-05-09 09:09]   deps_join
+[2016-05-09 09:09]   rtypes_last
+[2016-05-09 09:09]   rsenses_last
+[2016-05-09 09:09]   shared_2 GRU
+[2016-05-09 09:09]     config 'shared_2_gru_fwd_seq.shared_dim':  (100)
+[2016-05-09 09:09]     config 'shared_2_gru_fwd_seq.dropout_W':  (0.33)
+[2016-05-09 09:09]     config 'shared_2_gru_fwd_seq.dropout_U':  (0.66)
+[2016-05-09 09:09]     config 'shared_2_gru_bck_seq.shared_dim':  (100)
+[2016-05-09 09:09]     config 'shared_2_gru_bck_seq.dropout_W':  (0.33)
+[2016-05-09 09:09]     config 'shared_2_gru_bck_seq.dropout_U':  (0.66)
+[2016-05-09 09:09]     config 'shared_cnn_activation':  (sigmoid)
+[2016-05-09 09:09]     config 'shared_2_dense.shared_dim':  (100)
+[2016-05-09 09:09]     config 'shared_2.batch_normalization':  (True)
+[2016-05-09 09:09]     config 'shared_2.dropout_shared':  (0.25)
+[2016-05-09 09:09]   pos_tags_2
+[2016-05-09 09:09]   pos_join_2
+[2016-05-09 09:09]   deps_join_2
+[2016-05-09 09:09]   rtypes_last_2
+[2016-05-09 09:09]   rsenses_last_2
+[2016-05-09 09:09]   shared_3 GRU
+[2016-05-09 09:09]     config 'shared_3_gru_fwd_seq.shared_dim':  (100)
+[2016-05-09 09:09]     config 'shared_3_gru_fwd_seq.dropout_W':  (0.33)
+[2016-05-09 09:09]     config 'shared_3_gru_fwd_seq.dropout_U':  (0.66)
+[2016-05-09 09:09]     config 'shared_3_gru_bck_seq.shared_dim':  (100)
+[2016-05-09 09:09]     config 'shared_3_gru_bck_seq.dropout_W':  (0.33)
+[2016-05-09 09:09]     config 'shared_3_gru_bck_seq.dropout_U':  (0.66)
+[2016-05-09 09:09]     config 'shared_cnn_activation':  (sigmoid)
+[2016-05-09 09:09]     config 'shared_3_dense.shared_dim':  (100)
+[2016-05-09 09:09]     config 'shared_3.batch_normalization':  (True)
+[2016-05-09 09:09]     config 'shared_3.dropout_shared':  (0.25)
+[2016-05-09 09:09]   pos_tags_3
+[2016-05-09 09:09]   pos_join_3
+[2016-05-09 09:09]   deps_join_3
+[2016-05-09 09:09]   rtypes_last_3
+[2016-05-09 09:09]   rsenses_last_3
+[2016-05-09 09:09]   shared_4 GRU
+[2016-05-09 09:09]     config 'shared_4_gru_fwd_seq.shared_dim':  (100)
+[2016-05-09 09:09]     config 'shared_4_gru_fwd_seq.dropout_W':  (0.33)
+[2016-05-09 09:09]     config 'shared_4_gru_fwd_seq.dropout_U':  (0.66)
+[2016-05-09 09:09]     config 'shared_4_gru_bck_seq.shared_dim':  (100)
+[2016-05-09 09:09]     config 'shared_4_gru_bck_seq.dropout_W':  (0.33)
+[2016-05-09 09:09]     config 'shared_4_gru_bck_seq.dropout_U':  (0.66)
+[2016-05-09 09:09]     config 'shared_cnn_activation':  (sigmoid)
+[2016-05-09 09:09]     config 'shared_4_dense.shared_dim':  (100)
+[2016-05-09 09:09]     config 'shared_4.batch_normalization':  (True)
+[2016-05-09 09:09]     config 'shared_4.dropout_shared':  (0.25)
+[2016-05-09 09:09]   pos_tags_4
+[2016-05-09 09:09]   pos_join_4
+[2016-05-09 09:09]   deps_join_4
+[2016-05-09 09:09]   rtypes_last_4
+[2016-05-09 09:09]   rsenses_last_4
+[2016-05-09 09:09]   shared_5 GRU
+[2016-05-09 09:09]     config 'shared_5_gru_fwd_seq.shared_dim':  (100)
+[2016-05-09 09:09]     config 'shared_5_gru_fwd_seq.dropout_W':  (0.33)
+[2016-05-09 09:09]     config 'shared_5_gru_fwd_seq.dropout_U':  (0.66)
+[2016-05-09 09:09]     config 'shared_5_gru_bck_seq.shared_dim':  (100)
+[2016-05-09 09:09]     config 'shared_5_gru_bck_seq.dropout_W':  (0.33)
+[2016-05-09 09:09]     config 'shared_5_gru_bck_seq.dropout_U':  (0.66)
+[2016-05-09 09:09]     config 'shared_cnn_activation':  (sigmoid)
+[2016-05-09 09:09]     config 'shared_5_dense.shared_dim':  (100)
+[2016-05-09 09:09]     config 'shared_5.batch_normalization':  (True)
+[2016-05-09 09:09]     config 'shared_5.dropout_shared':  (0.25)
+[2016-05-09 09:09]   pos_tags_5
+[2016-05-09 09:09]   pos_join_5
+[2016-05-09 09:09]   deps_join_5
+[2016-05-09 09:09]   rtypes_last_5
+[2016-05-09 09:09]   rsenses_last_5
+[2016-05-09 09:09]   skipgram
+[2016-05-09 09:09] compile model
+[2016-05-09 09:14] previous weights (./models-v21/conll16st-v21-v21-81-ceq0wd100sd100-en-train)
+[2016-05-09 09:14] convert from dataset (/media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29)
+[2016-05-09 09:14] make predictions
+[2016-05-09 10:27] convert predictions (/tmp/gw0/2016-05-09-09-07-04/output)
+Using Theano backend.
+[2016-05-09 10:27] configuration (./models-v21/conll16st-v21-v21-82-cgt0rand4-en-train)
+[2016-05-09 10:27]     config 'epochs':  (1000)
+[2016-05-09 10:27]     config 'epochs_patience':  (20)
+[2016-05-09 10:27]     config 'epochs_len':  (-1)
+[2016-05-09 10:27]     config 'batch_size':  (64)
+[2016-05-09 10:27]     config 'batch_size_valid':  (128)
+[2016-05-09 10:27]     config 'snapshot_size':  (2000)
+[2016-05-09 10:27]     config 'optimizer':  (adam)
+[2016-05-09 10:27]     config 'words2vec_bin': ./data/word2vec-en/GoogleNews-vectors-negative300.bin.gz (None)
+[2016-05-09 10:27]     config 'words2vec_txt':  (None)
+[2016-05-09 10:27]     config 'words2vec_size':  (300)
+[2016-05-09 10:27]     config 'words2brown_txt': ./data/brown-en/brown-rcv1.clean.tokenized-CoNLL03.txt-c1000-freq1.txt (None)
+[2016-05-09 10:27]     config 'words2brown_emb_dim':  (40)
+[2016-05-09 10:27]     config 'random_per_sample':  (1)
+[2016-05-09 10:27]     config 'word_crop':  (200)
+[2016-05-09 10:27]     config 'padding_pre':  (20)
+[2016-05-09 10:27]     config 'padding_post':  (20)
+[2016-05-09 10:27]     config 'letter_size':  (3)
+[2016-05-09 10:27]     config 'skipgram_window_size':  (5)
+[2016-05-09 10:27]     config 'skipgram_negative_samples':  (5)
+[2016-05-09 10:27]     config 'filter_fn_name': conn_gt_0 (conn_eq_0)
+[2016-05-09 10:27]     config 'embedding_dim':  (100)
+[2016-05-09 10:27]     config 'shared_dim':  (100)
+[2016-05-09 10:27]     config 'dropout_shared':  (0.25)
+[2016-05-09 10:27]     config 'dropout_emb':  (0.33)
+[2016-05-09 10:27]     config 'dropout_W':  (0.33)
+[2016-05-09 10:27]     config 'dropout_U':  (0.66)
+[2016-05-09 10:27]     config 'shared_mode':  (gru_fwd_seq,gru_bck_seq,prev)
+[2016-05-09 10:27]   args.model_dir: ./models-v21/conll16st-v21-v21-82-cgt0rand4-en-train
+[2016-05-09 10:27]   args.dataset_dir: /media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29
+[2016-05-09 10:27]   args.output_dir: /tmp/gw0/2016-05-09-09-07-04/output
+[2016-05-09 10:27]   K._config: {u'epsilon': 1e-07, u'floatx': u'float32', u'backend': u'theano'}
+[2016-05-09 10:27]   os.getenv("THEANO_FLAGS"): mode=FAST_COMPILE
+[2016-05-09 10:27]   words2id_size: 50000
+[2016-05-09 10:27]   letter_offsets: [0, 1, 2, -3, -2, -1]
+[2016-05-09 10:27]   skipgram_offsets: [-2, -1, 0, 1, 2, 200, 201, 202, 203, 204]
+[2016-05-09 10:27]   filter_types: None
+[2016-05-09 10:27]   filter_senses: None
+[2016-05-09 10:27]   filter_fn_name: conn_gt_0
+[2016-05-09 10:27]   max_len: 204
+[2016-05-09 10:27]   config: {u'words2vec_bin': u'./data/word2vec-en/GoogleNews-vectors-negative300.bin.gz', u'words2brown_txt': u'./data/brown-en/brown-rcv1.clean.tokenized-CoNLL03.txt-c1000-freq1.txt', u'filter_fn_name': u'conn_gt_0'}
+[2016-05-09 10:27]     config 'words_input':  (True)
+[2016-05-09 10:27]     config 'words_input:embedding_dim':  (100)
+[2016-05-09 10:27]     config 'words_input:dropout_emb':  (0.33)
+[2016-05-09 10:27]     config 'letters_input':  (True)
+[2016-05-09 10:27]     config 'letters_input:embedding_dim':  (5)
+[2016-05-09 10:27]     config 'letters_input:dropout_emb':  (0.33)
+[2016-05-09 10:27]     config 'words2vec_input':  (False)
+[2016-05-09 10:27]     config 'words2brown_input':  (True)
+[2016-05-09 10:27]     config 'words2brownonehot_input':  (False)
+[2016-05-09 10:27]     config 'focus_input':  (True)
+[2016-05-09 10:27]     config 'rmarking_io_input':  (True)
+[2016-05-09 10:27]     config 'rmarking_io_input:rel_marking2id_mode':  (IO)
+[2016-05-09 10:27]     config 'skipgram':  (True)
+[2016-05-09 10:27]     config 'skipgram:embedding_dim':  (100)
+[2016-05-09 10:27]     config 'skipgram:dropout_emb':  (0.33)
+[2016-05-09 10:27]     config 'skipgram:loss':  (binary_crossentropy)
+[2016-05-09 10:27]     config 'rmarking':  (False)
+[2016-05-09 10:27]     config 'pos_tags':  (True)
+[2016-05-09 10:27]     config 'pos_tags:in':  (1)
+[2016-05-09 10:27]     config 'pos_tags:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'pos_tags:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'pos_parents':  (False)
+[2016-05-09 10:27]     config 'pos_join':  (True)
+[2016-05-09 10:27]     config 'pos_join:in':  (1)
+[2016-05-09 10:27]     config 'pos_join:out_activation':  (sigmoid)
+[2016-05-09 10:27]     config 'pos_join:loss':  (binary_crossentropy)
+[2016-05-09 10:27]     config 'pos_join:pos_join_low':  (0)
+[2016-05-09 10:27]     config 'pos_join:pos_join_high':  (None)
+[2016-05-09 10:27]     config 'deps_join':  (True)
+[2016-05-09 10:27]     config 'deps_join:in':  (1)
+[2016-05-09 10:27]     config 'deps_join:out_activation':  (sigmoid)
+[2016-05-09 10:27]     config 'deps_join:loss':  (binary_crossentropy)
+[2016-05-09 10:27]     config 'rtypes_last':  (True)
+[2016-05-09 10:27]     config 'rtypes_last:in':  (1)
+[2016-05-09 10:27]     config 'rtypes_last:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'rtypes_last:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'rsenses_last':  (True)
+[2016-05-09 10:27]     config 'rsenses_last:in':  (1)
+[2016-05-09 10:27]     config 'rsenses_last:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'rsenses_last:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'rtypes_seq_none':  (False)
+[2016-05-09 10:27]     config 'rtypes_seq_focus':  (False)
+[2016-05-09 10:27]     config 'focus_ret':  (False)
+[2016-05-09 10:27]     config 'pos_tags_2':  (True)
+[2016-05-09 10:27]     config 'pos_tags_2:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'pos_tags_2:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'pos_join_2':  (True)
+[2016-05-09 10:27]     config 'pos_join_2:out_activation':  (sigmoid)
+[2016-05-09 10:27]     config 'pos_join_2:loss':  (binary_crossentropy)
+[2016-05-09 10:27]     config 'pos_join_2:pos_join_low':  (0)
+[2016-05-09 10:27]     config 'pos_join_2:pos_join_high':  (None)
+[2016-05-09 10:27]     config 'deps_join_2':  (True)
+[2016-05-09 10:27]     config 'deps_join_2:out_activation':  (sigmoid)
+[2016-05-09 10:27]     config 'deps_join_2:loss':  (binary_crossentropy)
+[2016-05-09 10:27]     config 'rtypes_last_2':  (True)
+[2016-05-09 10:27]     config 'rtypes_last_2:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'rtypes_last_2:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'rsenses_last_2':  (True)
+[2016-05-09 10:27]     config 'rsenses_last_2:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'rsenses_last_2:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'pos_tags_3':  (True)
+[2016-05-09 10:27]     config 'pos_tags_3:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'pos_tags_3:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'pos_join_3':  (True)
+[2016-05-09 10:27]     config 'pos_join_3:out_activation':  (sigmoid)
+[2016-05-09 10:27]     config 'pos_join_3:loss':  (binary_crossentropy)
+[2016-05-09 10:27]     config 'pos_join_3:pos_join_low':  (0)
+[2016-05-09 10:27]     config 'pos_join_3:pos_join_high':  (None)
+[2016-05-09 10:27]     config 'deps_join_3':  (True)
+[2016-05-09 10:27]     config 'deps_join_3:out_activation':  (sigmoid)
+[2016-05-09 10:27]     config 'deps_join_3:loss':  (binary_crossentropy)
+[2016-05-09 10:27]     config 'rtypes_last_3':  (True)
+[2016-05-09 10:27]     config 'rtypes_last_3:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'rtypes_last_3:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'rsenses_last_3':  (True)
+[2016-05-09 10:27]     config 'rsenses_last_3:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'rsenses_last_3:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'pos_tags_4':  (True)
+[2016-05-09 10:27]     config 'pos_tags_4:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'pos_tags_4:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'pos_join_4':  (True)
+[2016-05-09 10:27]     config 'pos_join_4:out_activation':  (sigmoid)
+[2016-05-09 10:27]     config 'pos_join_4:loss':  (binary_crossentropy)
+[2016-05-09 10:27]     config 'pos_join_4:pos_join_low':  (0)
+[2016-05-09 10:27]     config 'pos_join_4:pos_join_high':  (None)
+[2016-05-09 10:27]     config 'deps_join_4':  (True)
+[2016-05-09 10:27]     config 'deps_join_4:out_activation':  (sigmoid)
+[2016-05-09 10:27]     config 'deps_join_4:loss':  (binary_crossentropy)
+[2016-05-09 10:27]     config 'rtypes_last_4':  (True)
+[2016-05-09 10:27]     config 'rtypes_last_4:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'rtypes_last_4:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'rsenses_last_4':  (True)
+[2016-05-09 10:27]     config 'rsenses_last_4:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'rsenses_last_4:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'pos_tags_5':  (True)
+[2016-05-09 10:27]     config 'pos_tags_5:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'pos_tags_5:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'pos_join_5':  (True)
+[2016-05-09 10:27]     config 'pos_join_5:out_activation':  (sigmoid)
+[2016-05-09 10:27]     config 'pos_join_5:loss':  (binary_crossentropy)
+[2016-05-09 10:27]     config 'pos_join_5:pos_join_low':  (0)
+[2016-05-09 10:27]     config 'pos_join_5:pos_join_high':  (None)
+[2016-05-09 10:27]     config 'deps_join_5':  (True)
+[2016-05-09 10:27]     config 'deps_join_5:out_activation':  (sigmoid)
+[2016-05-09 10:27]     config 'deps_join_5:loss':  (binary_crossentropy)
+[2016-05-09 10:27]     config 'rtypes_last_5':  (True)
+[2016-05-09 10:27]     config 'rtypes_last_5:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'rtypes_last_5:loss':  (categorical_crossentropy)
+[2016-05-09 10:27]     config 'rsenses_last_5':  (True)
+[2016-05-09 10:27]     config 'rsenses_last_5:out_activation':  (softmax)
+[2016-05-09 10:27]     config 'rsenses_last_5:loss':  (categorical_crossentropy)
+[2016-05-09 10:27] load dataset for prediction (/media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29)
+[2016-05-09 10:28]   /media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29: doc_ids: 91, words: 55453, rel_ids: 986, relation tokens: 38208
+[2016-05-09 10:28]   words2brown: 1002, rel_marking_io2id: 5, letters2id: 82, rel_types2id: 4, focus2id: 1, deps2id: 46, rel_senses2id: 22, pos_tags2id: 47, pos_join2id: 73, words2id: 43918
+[2016-05-09 10:28] build model (31 tasks in 5 shared layers)
+[2016-05-09 10:28]   words_input
+[2016-05-09 10:28]   letters_input
+[2016-05-09 10:28]   words2brown_input
+[2016-05-09 10:28]   focus_input
+[2016-05-09 10:28]   rmarking_io_input
+[2016-05-09 10:28]   pos_tags
+[2016-05-09 10:28]   pos_join
+[2016-05-09 10:28]   deps_join
+[2016-05-09 10:28]   rtypes_last
+[2016-05-09 10:28]   rsenses_last
+[2016-05-09 10:28]   shared_2 GRU
+[2016-05-09 10:28]     config 'shared_2_gru_fwd_seq.shared_dim':  (100)
+[2016-05-09 10:28]     config 'shared_2_gru_fwd_seq.dropout_W':  (0.33)
+[2016-05-09 10:28]     config 'shared_2_gru_fwd_seq.dropout_U':  (0.66)
+[2016-05-09 10:28]     config 'shared_2_gru_bck_seq.shared_dim':  (100)
+[2016-05-09 10:28]     config 'shared_2_gru_bck_seq.dropout_W':  (0.33)
+[2016-05-09 10:28]     config 'shared_2_gru_bck_seq.dropout_U':  (0.66)
+[2016-05-09 10:28]     config 'shared_cnn_activation':  (sigmoid)
+[2016-05-09 10:28]     config 'shared_2_dense.shared_dim':  (100)
+[2016-05-09 10:28]     config 'shared_2.batch_normalization':  (True)
+[2016-05-09 10:28]     config 'shared_2.dropout_shared':  (0.25)
+[2016-05-09 10:28]   pos_tags_2
+[2016-05-09 10:28]   pos_join_2
+[2016-05-09 10:28]   deps_join_2
+[2016-05-09 10:28]   rtypes_last_2
+[2016-05-09 10:28]   rsenses_last_2
+[2016-05-09 10:28]   shared_3 GRU
+[2016-05-09 10:28]     config 'shared_3_gru_fwd_seq.shared_dim':  (100)
+[2016-05-09 10:28]     config 'shared_3_gru_fwd_seq.dropout_W':  (0.33)
+[2016-05-09 10:28]     config 'shared_3_gru_fwd_seq.dropout_U':  (0.66)
+[2016-05-09 10:28]     config 'shared_3_gru_bck_seq.shared_dim':  (100)
+[2016-05-09 10:28]     config 'shared_3_gru_bck_seq.dropout_W':  (0.33)
+[2016-05-09 10:28]     config 'shared_3_gru_bck_seq.dropout_U':  (0.66)
+[2016-05-09 10:28]     config 'shared_cnn_activation':  (sigmoid)
+[2016-05-09 10:28]     config 'shared_3_dense.shared_dim':  (100)
+[2016-05-09 10:28]     config 'shared_3.batch_normalization':  (True)
+[2016-05-09 10:28]     config 'shared_3.dropout_shared':  (0.25)
+[2016-05-09 10:28]   pos_tags_3
+[2016-05-09 10:28]   pos_join_3
+[2016-05-09 10:28]   deps_join_3
+[2016-05-09 10:28]   rtypes_last_3
+[2016-05-09 10:28]   rsenses_last_3
+[2016-05-09 10:28]   shared_4 GRU
+[2016-05-09 10:28]     config 'shared_4_gru_fwd_seq.shared_dim':  (100)
+[2016-05-09 10:28]     config 'shared_4_gru_fwd_seq.dropout_W':  (0.33)
+[2016-05-09 10:28]     config 'shared_4_gru_fwd_seq.dropout_U':  (0.66)
+[2016-05-09 10:28]     config 'shared_4_gru_bck_seq.shared_dim':  (100)
+[2016-05-09 10:28]     config 'shared_4_gru_bck_seq.dropout_W':  (0.33)
+[2016-05-09 10:28]     config 'shared_4_gru_bck_seq.dropout_U':  (0.66)
+[2016-05-09 10:28]     config 'shared_cnn_activation':  (sigmoid)
+[2016-05-09 10:28]     config 'shared_4_dense.shared_dim':  (100)
+[2016-05-09 10:28]     config 'shared_4.batch_normalization':  (True)
+[2016-05-09 10:28]     config 'shared_4.dropout_shared':  (0.25)
+[2016-05-09 10:28]   pos_tags_4
+[2016-05-09 10:28]   pos_join_4
+[2016-05-09 10:28]   deps_join_4
+[2016-05-09 10:28]   rtypes_last_4
+[2016-05-09 10:28]   rsenses_last_4
+[2016-05-09 10:28]   shared_5 GRU
+[2016-05-09 10:28]     config 'shared_5_gru_fwd_seq.shared_dim':  (100)
+[2016-05-09 10:28]     config 'shared_5_gru_fwd_seq.dropout_W':  (0.33)
+[2016-05-09 10:28]     config 'shared_5_gru_fwd_seq.dropout_U':  (0.66)
+[2016-05-09 10:28]     config 'shared_5_gru_bck_seq.shared_dim':  (100)
+[2016-05-09 10:28]     config 'shared_5_gru_bck_seq.dropout_W':  (0.33)
+[2016-05-09 10:28]     config 'shared_5_gru_bck_seq.dropout_U':  (0.66)
+[2016-05-09 10:28]     config 'shared_cnn_activation':  (sigmoid)
+[2016-05-09 10:28]     config 'shared_5_dense.shared_dim':  (100)
+[2016-05-09 10:28]     config 'shared_5.batch_normalization':  (True)
+[2016-05-09 10:28]     config 'shared_5.dropout_shared':  (0.25)
+[2016-05-09 10:28]   pos_tags_5
+[2016-05-09 10:28]   pos_join_5
+[2016-05-09 10:28]   deps_join_5
+[2016-05-09 10:28]   rtypes_last_5
+[2016-05-09 10:28]   rsenses_last_5
+[2016-05-09 10:28]   skipgram
+[2016-05-09 10:28] compile model
+[2016-05-09 10:32] previous weights (./models-v21/conll16st-v21-v21-82-cgt0rand4-en-train)
+[2016-05-09 10:32] convert from dataset (/media/test-datasets/discourse-relation-sense-classification/conll16-st-test-en-2016-03-29)
+[2016-05-09 10:33] make predictions
+[2016-05-09 11:46] convert predictions (/tmp/gw0/2016-05-09-09-07-04/output)

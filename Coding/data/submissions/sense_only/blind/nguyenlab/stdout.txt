@@ -1,0 +1,78 @@
+sh sc-close-predict.sh /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29 /tmp/nguyenlab/2016-05-01-12-12-17/output
+
+
++----------------------------------------------------------------------------------------+
++                  CONLL 2016 - Discourse Relation Sense Classification                  +
++----------------------------------------------------------------------------------------+
+-command    : convert-into-arff
+-resource_folder : /home/nguyenlab/TIRA/task2/resources
+-features   : CONNECTIVE:CONNECTIVE_POS:REGEX:OTHER:POS_PATTERN
+-relations_file : /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29/relations-no-senses.json
+-level      : FULL   
+-map_path   : /tmp/nguyenlab/2016-05-01-12-12-17/output/tmp_output/dev_relation_map.json
+-explicit   : True   
+-has_label  : False  
+-parse_file : /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29/parses.json
+-output     : /tmp/nguyenlab/2016-05-01-12-12-17/output/tmp_output/dev-explicit.arff
+        1 :  70                             :      11
+        2 :  110                            :      46
+        3 :  111                            :      50
+        4 :  80                             :       6
+        5 :  50                             :       6
+        6 :  60                             :     193
+... load data and parse file !
+... feature extraction and convert to ARFF !
+.....
+... total:  584
+... total not in the list:  0
++----------------------------------------------------------------------------------------+
++                  CONLL 2016 - Discourse Relation Sense Classification                  +
++----------------------------------------------------------------------------------------+
+-command    : predict-and-fill
+-has_label  : False  
+-level      : FULL   
+-filled_path : /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29/relations-no-senses.json
+-test_path  : /tmp/nguyenlab/2016-05-01-12-12-17/output/tmp_output/dev-explicit.arff
+-relation_map_path : /tmp/nguyenlab/2016-05-01-12-12-17/output/tmp_output/dev_relation_map.json
+-model_path : /home/nguyenlab/TIRA/task2/pre-trainned-models/close/train-explicit-SMO.model
+-output     : /tmp/nguyenlab/2016-05-01-12-12-17/output/tmp_output/out-explicit.json
+584 relations has been filled with sense and type
++----------------------------------------------------------------------------------------+
++                  CONLL 2016 - Discourse Relation Sense Classification                  +
++----------------------------------------------------------------------------------------+
+-command    : convert-into-arff
+-resource_folder : /home/nguyenlab/TIRA/task2/resources
+-features   : SIM:MPQA:W2VPAIR:REGEX:OTHER:WORDPAIR:POS_PATTERN
+-relations_file : /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29/relations-no-senses.json
+-level      : FULL   
+-map_path   : /tmp/nguyenlab/2016-05-01-12-12-17/output/tmp_output/dev_relation_map_implicit.json
+-explicit   : False  
+-has_label  : False  
+-parse_file : /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29/parses.json
+-output     : /tmp/nguyenlab/2016-05-01-12-12-17/output/tmp_output/dev-implicit.arff
+        1 :  32                             :       9
+        2 :  100                            :     213
+        3 :  40                             :      20
+        4 :  10                             :       5
+        5 :  110                            :      46
+        6 :  111                            :      50
+        7 :  80                             :       6
+        8 :  50                             :       6
+        9 :  31                             :       9
+... load data and parse file !
+... feature extraction and convert to ARFF !
+......
+... total:  625
+... total not in the list:  0
++----------------------------------------------------------------------------------------+
++                  CONLL 2016 - Discourse Relation Sense Classification                  +
++----------------------------------------------------------------------------------------+
+-command    : predict-and-fill
+-has_label  : False  
+-level      : FULL   
+-filled_path : /media/test-datasets/discourse-relation-sense-classification/conll16-st-blind-test-en-2016-03-29/relations-no-senses.json
+-test_path  : /tmp/nguyenlab/2016-05-01-12-12-17/output/tmp_output/dev-implicit.arff
+-relation_map_path : /tmp/nguyenlab/2016-05-01-12-12-17/output/tmp_output/dev_relation_map_implicit.json
+-model_path : /home/nguyenlab/TIRA/task2/pre-trainned-models/close/train-implicit-RandomForest.model
+-output     : /tmp/nguyenlab/2016-05-01-12-12-17/output/tmp_output/out-implicit.json
+625 relations has been filled with sense and type
