@@ -72,7 +72,7 @@ It is rare that all parsers predict the correct sense, with this happening for a
 
 There are, however, clear differences in difficulty of recognition between the senses. For concessions, results, and restatements, it is more common that all parsers give a wrong result than even a single parser giving a correct one. Apparently, these senses have structures that make them harder to identify for the algorithms. This is consistent with the results we found later, where these senses usually had a lower-than-average or even the lowest F1 score among all senses.
 
-An interesting thing to note is that it sometimes occurs than all three parsers agree on the same wrong sense. This is especially common for condition (7 out of 12) and succession (14 out of 24) relations. \textbf{WHAT DO THEY AGREE ON INSTEAD?}
+An interesting thing to note is that it sometimes occurs than all three parsers agree on the same wrong sense. This is especially common for condition (7 out of 12) and succession (14 out of 24) relations. Often, these are wrongly classified as entity relations, which might be because the parsers are not sure of a discourse relation but identify the entities in the two arguments. For succession relations, 10 of the 14 were classified as synchrony, so the parsers did select the right sense category, but not the right sense.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[htbp]
@@ -100,7 +100,35 @@ Temp.Synchrony 		 & 76  & 16  & 61  & 15  & 3  \\
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\textit{individual evaluation and pairwise agreement}
+Individual statistics for the three best parsers are shown in table \ref{tab:comp2}, with ''total'' listing the number of predictions made by the parsers for the given sense. The column labeled ''only'' has the number of relations for which only that parser (out of the three) was able to correctly identify the relation sense. This is a far more common occurence for the oslopots (180 total) and ecnucs (166 total) parsers than for the steven parser (56 total). This is important to note for the parser combination approaches, since the oslopots and ecnucs parsers can identify most of the relations sense that the steven parser identifies, while the reverse is not true. The column ''not found'' has the number of relations that could not be aligned.  A reason for this might be that the parser chooses the wrong word or phrase as the connective, but this happens only very rarely.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|r|r|r|r||r|r|r|r||r|r|r|r}
+\multicolumn{1}{ }{ } & \multicolumn{4}{|c||}{oslopots} & \multicolumn{4}{|c||}{ecnucs} & \multicolumn{4}{c}{steven} \\
+sense & total & correct & only & not found & total & correct & only & not found & total & correct & only & not found \\ \hline
+
+Comp.Concession 	 & 27 & 12 & 1 & 0 & 25 & 11 & 1 & 0 & 34 & 5 & 1 & 0\\
+Comp.Contrast 		 & 275 & 247 & 22 & 1 & 311 & 239 & 22 & 2 & 308 & 181 & 12 & 0\\
+Cont.Cause.Reason 	 & 165 & 92 & 25 & 1 & 152 & 82 & 22 & 2 & 99 & 42 & 4 & 6\\
+Cont.Cause.Result 	 & 54 & 42 & 5 & 0 & 70 & 37 & 13 & 0 & 77 & 33 & 5 & 1\\
+Cont.Condition 		 & 49 & 49 & 3 & 3 & 44 & 43 & 0 & 1 & 63 & 37 & 0 & 3\\
+EntRel 				 & 534 & 177 & 42 & 0 & 245 & 120 & 11 & 0 & 308 & 102 & 6 & 0\\
+Exp.Alternative 	 & 5 & 4 & 1 & 0 & 4 & 3 & 0 & 0 & 3 & 2 & 0 & 0\\
+Exp.Conjunction 	 & 392 & 264 & 41 & 1 & 314 & 231 & 23 & 3 & 427 & 178 & 20 & 1\\
+Exp.Instantiation    & 42 & 33 & 5 & 0 & 66 & 49 & 21 & 0 & 36 & 17 & 1 & 0\\
+Exp.Restatement 	 & 122 & 40 & 27 & 0 & 144 & 55 & 42 & 0 & 5 & 3 & 1 & 0\\
+Temp.Asyn.Precedence & 35 & 34 & 2 & 2 & 40 & 31 & 1 & 0 & 58 & 26 & 1 & 0\\
+Temp.Asyn.Succession & 42 & 41 & 3 & 3 & 34 & 33 & 1 & 1 & 42 & 25 & 2 & 2\\
+Temp.Synchrony 		 & 84 & 49 & 3 & 2 & 88 & 51 & 9 & 4 & 71 & 25 & 3 & 1\\ 
+
+\end{tabular}}
+\caption{Statistics for the three individual parsers. ''only'' means that the parser was the only one (out of the three) to correctly identify the sense.}
+\label{tab:comp2}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \textit{compare performances of all parsers}
 
@@ -194,9 +222,9 @@ Overall 			 & 0.5485 & 0.5476 & 0.5480 & 0.5360 & 0.5352 & 0.5356 & 0.5423 & 0.5
 %%%%% CONCLUSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Conclusion}
-parsers are(n't) good at different things
+\textit{architecture <-> performance}
 
-combination (does not) improve results
+In this project we have shown that using simple statistical methods to combine several different parsers can slightly increase the sense classification accuracy. The improvement is not that large because for the ''easy'' senses most of the parsers already agreed, while there was nothing we could do in cases where all or most of the parsers calculated a wrong sense. Nevertheless, we were able to improve the accuracy by 0.75\% compared to the best parser submitted to the CoNLL shared task.
 
 \pagebreak
 \bibliography{projectreport}
